@@ -1,0 +1,53 @@
+.body {
+    font-family: Inter;
+    font-style: normal;
+}
+
+.header {
+    min-height: 74px;
+}
+
+.header__container {
+    margin: 0 auto;
+    max-width: 1140px;
+    min-height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container-right {
+    display: flex;
+    gap: 30px;
+}
+
+.header__signup {
+    color: #FFF;
+    color: black;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.header__signin {
+    width: 76px;
+    height: 32px;
+    border-radius: 3px;
+    background: #2BE080;
+    border: transparent;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+
+.hero {
+    min-height: 648px;
+    background: #465DFF;
+}
