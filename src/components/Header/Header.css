@@ -1,8 +1,3 @@
-.body {
-    font-family: Inter;
-    font-style: normal;
-}
-
 .header {
     min-height: 74px;
 }
@@ -44,10 +39,4 @@
     font-weight: 500;
     line-height: 16px;
     cursor: pointer;
-}
-
-
-.hero {
-    min-height: 648px;
-    background: #465DFF;
 }
