@@ -1,0 +1,48 @@
+.footer {
+    background: #FAFAFA;
+}
+
+.footer__container {
+    margin: 0 auto;
+    max-width: 1140px;
+    min-height: 172px;
+}
+
+.footer__info {
+    padding-top: 79px;
+    min-height: 37px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.footer__title {
+    margin: 0;
+    color: #A0A0A0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer__navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__year {
+    margin: 0;
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer__container-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__link {
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: unset;
+}
