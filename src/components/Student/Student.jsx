@@ -21,17 +21,19 @@ function Student() {
 
             <h3 className="student__title-portfolio">Портфолио</h3>
 
-            <div className="student__portfolio">
-                <p className="student-portfolio-description">Статичный сайт</p>
-                <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
-            </div>
-            <div className="student__portfolio">
-                <p className="student-portfolio-description">Адаптивный сайт</p>
-                <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
-            </div>
-            <div className="student__portfolio">
-                <p className="student-portfolio-description">Одностраничное приложение</p>
-                <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
+            <div>
+                <div className="student__portfolio">
+                    <p className="student-portfolio-description">Статичный сайт</p>
+                    <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
+                </div>
+                <div className="student__portfolio">
+                    <p className="student-portfolio-description">Адаптивный сайт</p>
+                    <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
+                </div>
+                <div className="student__portfolio">
+                    <p className="student-portfolio-description">Одностраничное приложение</p>
+                    <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
+                </div>
             </div>
 
         </div>
