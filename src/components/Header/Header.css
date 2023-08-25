@@ -48,3 +48,9 @@
 .header__offer-button {
     color: white;
 }
+
+@media screen and (max-width: 1140px) {
+    .header__container {
+        margin: 0 30px;
+    }
+}

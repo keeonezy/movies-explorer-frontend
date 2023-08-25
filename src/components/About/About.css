@@ -1,7 +1,7 @@
 .about {
     margin: 0 auto;
-    min-height: 608px;
     max-width: 1140px;
+    min-height: 608px;
 }
 
 .about__info {
@@ -80,4 +80,30 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 1140px) {
+    .about {
+        min-height: 585px;
+    }
+
+    .about__info {
+        margin: 90px 50px 0;
+    }
+
+    .about__container-time {
+        margin: 70px 50px 0;
+    }
+
+    .about__container-time {
+        gap: 30px;
+    }
+
+    .about__container-progess {
+        margin: 93px 50px 0;
+    }
+
+    .about__progress-l {
+        max-width: 140px;
+    }
 }

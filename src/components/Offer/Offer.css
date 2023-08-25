@@ -1,17 +1,15 @@
 .offer {
     background: #465DFF;
+    min-height: 648px;
 }
 
 .offer__container {
     margin: 0 auto;
     max-width: 1140px;
-    min-height: 648px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.offer__container-left {}
 
 .offer__title {
     margin: 0;
@@ -44,4 +42,32 @@
     font-weight: 500;
     line-height: 16px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1140px) {
+    .offer {
+        min-height: 850px;
+    }
+
+    .offer__container {
+        padding-top: 140px;
+        flex-direction: column-reverse;
+    }
+
+    .offer__title {
+        margin-top: 48px;
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .offer__description {
+        margin: 22px auto 0;
+        text-align: center;
+    }
+
+    .offer__button {
+        margin: 92px auto 0;
+        display: block;
+    }
 }
