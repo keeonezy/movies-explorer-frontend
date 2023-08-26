@@ -3,6 +3,7 @@ import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { Main } from "../Main/Main";
 import { NotFound } from "../NotFound/NotFound";
+import { Register } from "../Register/Register";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         {/* <Header /> */}
         {/* <Main /> */}
         {/* <Footer /> */}
-        <NotFound />
+        {/* <NotFound /> */}
+        <Register />
       </div>
     </div>
   );
