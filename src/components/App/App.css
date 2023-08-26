@@ -2,3 +2,7 @@
     font-family: Inter;
     font-style: normal;
 }
+
+.page {
+    min-height: 100vh;
+}
