@@ -1,20 +1,20 @@
-.instruments {
+.techs {
     background: #F5F5F5;
     min-height: 625px;
 }
 
-.instruments__container {
+.techs__container {
     margin: 0 auto;
     max-width: 1140px;
 }
 
-.instruments__info {
+.techs__info {
     padding-top: 110px;
     min-height: 51px;
     border-bottom: 1px solid black;
 }
 
-.instruments__title {
+.techs__title {
     margin: 0;
     color: #000;
     font-size: 22px;
@@ -22,7 +22,7 @@
     letter-spacing: -0.88px;
 }
 
-.instruments__title-info {
+.techs__title-info {
     margin: 0;
     margin-top: 90px;
     color: #000;
@@ -33,7 +33,7 @@
     letter-spacing: -2px;
 }
 
-.instruments__description {
+.techs__description {
     margin: 0;
     margin-top: 26px;
     color: #000;
@@ -44,7 +44,7 @@
     letter-spacing: -0.56px;
 }
 
-.instruments__elements {
+.techs__elements {
     margin: 0;
     padding: 0;
     margin-top: 100px;
@@ -55,7 +55,7 @@
     gap: 10px;
 }
 
-.instruments__element {
+.techs__element {
     min-width: 90px;
     min-height: 60px;
     border-radius: 10px;
@@ -65,7 +65,7 @@
     align-items: center;
 }
 
-.instruments__element-desc {
+.techs__element-desc {
     margin: 0;
     color: #000;
     text-align: center;
@@ -75,59 +75,59 @@
 }
 
 @media screen and (max-width: 1140px) {
-    .instruments {
+    .techs {
         min-height: 567px;
     }
 
-    .instruments__info {
+    .techs__info {
         margin: 0 50px;
         padding-top: 90px;
     }
 
-    .instruments__title-info {
+    .techs__title-info {
         margin-top: 80px;
     }
 
-    .instruments__elements {
+    .techs__elements {
         margin: 83px 50px 0;
     }
 
-    .instruments__element {
+    .techs__element {
         min-width: 84px;
         min-height: 57px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .instruments {
+    .techs {
         min-height: 651px;
         background-color: white;
     }
 
-    .instruments__info {
+    .techs__info {
         margin: 0 18px;
         padding-top: 70px;
     }
 
-    .instruments__title {
+    .techs__title {
         font-size: 18px;
         letter-spacing: -0.72px;
     }
 
-    .instruments__title-info {
+    .techs__title-info {
         margin-top: 60px;
         font-size: 30px;
         letter-spacing: -1.2px;
     }
 
-    .instruments__description {
+    .techs__description {
         margin: 24px 14px 0;
         font-size: 11px;
         line-height: 16px;
         letter-spacing: -0.44px;
     }
 
-    .instruments__elements {
+    .techs__elements {
         margin: 50px 71px 0;
         justify-content: flex-start;
     }

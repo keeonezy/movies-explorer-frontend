@@ -1,9 +1,9 @@
-.offer {
+.promo {
     background: #465DFF;
     min-height: 648px;
 }
 
-.offer__container {
+.promo__container {
     margin: 0 auto;
     min-height: 648px;
     max-width: 1140px;
@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.offer__title {
+.promo__title {
     margin: 0;
     max-width: 640px;
     color: #FFF;
@@ -21,7 +21,7 @@
     line-height: 58px;
 }
 
-.offer__description {
+.promo__description {
     margin: 0;
     max-width: 310px;
     margin-top: 36px;
@@ -31,7 +31,7 @@
     opacity: 0.5;
 }
 
-.offer__button {
+.promo__button {
     margin-top: 146px;
     width: 129px;
     height: 36px;
@@ -46,60 +46,60 @@
 }
 
 @media screen and (max-width: 1140px) {
-    .offer {
+    .promo {
         min-height: 850px;
     }
 
-    .offer__container {
+    .promo__container {
         padding-top: 140px;
         min-height: 0px;
         flex-direction: column-reverse;
     }
 
-    .offer__title {
+    .promo__title {
         margin-top: 48px;
         font-size: 40px;
         line-height: 50px;
         text-align: center;
     }
 
-    .offer__description {
+    .promo__description {
         margin: 22px auto 0;
         text-align: center;
     }
 
-    .offer__button {
+    .promo__button {
         margin: 92px auto 0;
         display: block;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .offer {
+    .promo {
         min-height: 636px;
     }
 
-    .offer__container {
+    .promo__container {
         margin: 0 10px;
         padding-top: 70px;
     }
 
-    .offer__image {
+    .promo__image {
         max-width: 210px;
         max-height: 206px;
     }
 
-    .offer__title {
+    .promo__title {
         font-size: 30px;
         line-height: 38px;
         letter-spacing: -1.2px;
     }
 
-    .offer__description {
+    .promo__description {
         margin: 24px auto 0;
     }
 
-    .offer__button {
+    .promo__button {
         margin: 80px auto 0;
     }
 }

@@ -1,16 +1,16 @@
-.about {
+.about-project {
     margin: 0 auto;
     max-width: 1140px;
     min-height: 608px;
 }
 
-.about__info {
+.about-project__info {
     margin-top: 110px;
     min-height: 51px;
     border-bottom: 1px solid black;
 }
 
-.about__title {
+.about-project__title {
     margin: 0;
     color: #000;
     font-size: 22px;
@@ -18,13 +18,13 @@
     letter-spacing: -0.88px;
 }
 
-.about__container-time {
+.about-project__container-time {
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
 }
 
-.about__title-time {
+.about-project__title-time {
     margin: 0;
     color: #000;
     font-size: 20px;
@@ -32,7 +32,7 @@
     letter-spacing: -0.8px;
 }
 
-.about__description-time {
+.about-project__description-time {
     margin: 0;
     margin-top: 26px;
     color: #000;
@@ -41,30 +41,30 @@
     line-height: 20px;
 }
 
-.about__container-progess {
+.about-project__container-progess {
     margin-top: 110px;
     display: flex;
     justify-content: space-between;
 }
 
-.about__progess-left {
+.about-project__progess-left {
     background: #2BE080;
     width: 100%;
 }
 
-.about__progess-right {
+.about-project__progess-right {
     background: #F2F2F2;
     width: 100%;
 }
 
-.about__progress-text {
+.about-project__progress-text {
     color: #000;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
 }
 
-.about__progress-name {
+.about-project__progress-name {
     color: #A0A0A0;
     text-align: center;
     font-size: 14px;
@@ -72,81 +72,81 @@
     line-height: 17px;
 }
 
-.about__progress-l {
+.about-project__progress-l {
     width: 100%;
     max-width: 228px;
     display: flex;
     flex-direction: column;
 }
 
-.about__progress-xl {
+.about-project__progress-xl {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 @media screen and (max-width: 1140px) {
-    .about {
+    .about-project {
         min-height: 585px;
     }
 
-    .about__info {
+    .about-project__info {
         margin: 90px 50px 0;
     }
 
-    .about__container-time {
+    .about-project__container-time {
         margin: 70px 50px 0;
     }
 
-    .about__container-time {
+    .about-project__container-time {
         gap: 30px;
     }
 
-    .about__container-progess {
+    .about-project__container-progess {
         margin: 93px 50px 0;
     }
 
-    .about__progress-l {
+    .about-project__progress-l {
         max-width: 140px;
     }
 
-    .about__description-time {
+    .about-project__description-time {
         margin-top: 22px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .about {
+    .about-project {
         min-height: 641px;
     }
 
-    .about__info {
+    .about-project__info {
         margin: 70px 18px 0;
     }
 
-    .about__title {
+    .about-project__title {
         font-size: 18px;
         letter-spacing: -0.72px;
     }
 
-    .about__container-time {
+    .about-project__container-time {
         flex-direction: column;
         margin: 60px 18px 0;
         gap: 56px;
     }
 
-    .about__title-time {
+    .about-project__title-time {
         font-size: 18px;
         letter-spacing: -0.72px;
     }
 
-    .about__description-time {
+    .about-project__description-time {
         margin-top: 16px;
         font-size: 11px;
         line-height: 16px;
     }
 
-    .about__container-progess {
+    .about-project__container-progess {
         margin: 60px 18px 0;
     }
 }

@@ -1,8 +1,8 @@
 import "./App.css"
 import { Header } from "../Header/Header";
-import { Offer } from "../Offer/Offer";
-import { About } from "../About/About";
-import { Instruments } from "../Instruments/Instruments";
+import { Promo } from "../Promo/Promo";
+import { AboutProject } from "../AboutProject/AboutProject";
+import { Techs } from "../Techs/Techs";
 import { Student } from "../Student/Student";
 import { Footer } from "../Footer/Footer";
 
@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="body">
       <Header />
-      <Offer />
-      <About />
-      <Instruments />
+      <Promo />
+      <AboutProject />
+      <Techs />
       <Student />
       <Footer />
     </div>
