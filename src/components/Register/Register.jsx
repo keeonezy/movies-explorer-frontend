@@ -3,30 +3,30 @@ import logo from "../../images/logo.svg";
 
 function Register() {
     return (
-        <div className="register">
+        <div className="auth">
             <img src={logo} alt="" className="header__logo" />
-            <h2 className="register__title">Добро пожаловать!</h2>
+            <h2 className="auth__title">Добро пожаловать!</h2>
 
-            <form className="register__form" name='form-register' method="get">
-                <p className="register__input-name">Имя</p>
-                <div className="register__input-design">
-                    <input type="text" className="register__input" placeholder="Введите имя" required />
+            <form className="auth__form" name='form-auth' method="get">
+                <p className="auth__input-name">Имя</p>
+                <div className="auth__input-design">
+                    <input type="text" className="auth__input" placeholder="Введите имя" required />
                 </div>
 
-                <p className="register__input-name">E-mail</p>
-                <div className="register__input-design">
-                    <input type="email" className="register__input" placeholder="Введите почту" required />
+                <p className="auth__input-name">E-mail</p>
+                <div className="auth__input-design">
+                    <input type="email" className="auth__input" placeholder="Введите почту" required />
                 </div>
 
-                <p className="register__input-name">Пароль</p>
-                <div className="register__input-design">
-                    <input type="password" className="register__input register__text-password" placeholder="Введите почту" required />
+                <p className="auth__input-name">Пароль</p>
+                <div className="auth__input-design">
+                    <input type="password" className="auth__input auth__text-password" placeholder="Введите почту" required />
                 </div>
-                <p className="register__input-text-error">Что-то пошло не так...</p>
+                <p className="auth__input-text-error">Что-то пошло не так...</p>
 
-                <button className="register__form-button">Зарегистрироваться</button>
+                <button className="auth__form-button">Зарегистрироваться</button>
 
-                <p className="register__info">Уже зарегистрированы? <span>Войти</span></p>
+                <p className="auth__info">Уже зарегистрированы? <span>Войти</span></p>
             </form>
         </div>
     )
