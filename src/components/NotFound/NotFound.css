@@ -1,0 +1,36 @@
+.not-found {
+    min-height: 100vh;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.not-found__title {
+    margin: 0;
+    color: #000;
+    text-align: center;
+    font-size: 140px;
+    font-weight: 400;
+}
+
+.not-found__description {
+    margin: 0;
+    margin-top: 5px;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.not-found__back {
+    margin: 0;
+    margin-top: 184px;
+    color: #FF6838;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
