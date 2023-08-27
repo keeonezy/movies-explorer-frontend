@@ -157,7 +157,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 740px) {
     .student {
         min-height: 1198px;
     }

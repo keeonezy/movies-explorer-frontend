@@ -115,7 +115,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 740px) {
     .about-project {
         min-height: 641px;
     }
