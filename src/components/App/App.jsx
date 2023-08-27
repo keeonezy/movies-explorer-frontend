@@ -4,6 +4,7 @@ import { Footer } from "../Footer/Footer";
 import { Main } from "../Main/Main";
 import { NotFound } from "../NotFound/NotFound";
 import { Register } from "../Register/Register";
+import { Login } from "../Login/Login";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         {/* <Main /> */}
         {/* <Footer /> */}
         {/* <NotFound /> */}
-        <Register />
+        {/* <Register /> */}
+        <Login />
       </div>
     </div>
   );
