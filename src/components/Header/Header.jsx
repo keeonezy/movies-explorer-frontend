@@ -1,31 +1,15 @@
 import "./Header.css";
-import logo from "../../images/logo.svg";
-import headerProfile from "../../images/header-profile.svg";
+import { useLocation } from 'react-router-dom';
+import { Navigation } from "../Navigation/Navigation";
 import headerMenu from "../../images/header-menu.svg";
 
 function Header() {
+    const pathname = useLocation().pathname;
+
     return (
-        <header className="header">
-            {/* <div className="header header__offer"> */}
+        <header className={`header ${pathname === "/" ? "header__offer" : ""}`}>
             <div className="header__container">
-                <div className="header__container-left">
-                    <img src={logo} alt="" className="header__logo" />
-
-                    <div className="header__navigation">
-                        <a href="" className="header__link">Фильмы</a>
-                        <a href="" className="header__link">Сохранённые фильмы</a>
-                    </div>
-                </div>
-
-                {/* <div className="header__container-right">
-                    <button className="header__signup header__offer-button">Регистрация</button>
-                    <button className="header__signin">Войти</button>
-                </div> */}
-                <div className="header__profile">
-                    <p className="header__profile-text">Аккаунт</p>
-                    <img src={headerProfile} alt="" className="header__profile-image" />
-                </div>
-
+                <Navigation />
                 <img src={headerMenu} alt="" className="header__menu" />
             </div>
         </header>
