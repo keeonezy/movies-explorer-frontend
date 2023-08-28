@@ -35,3 +35,27 @@
     cursor: pointer;
     background-color: transparent;
 }
+
+@media screen and (max-width: 1140px) {
+    .search-form {
+        margin: 0 30px;
+        min-height: 246px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .search-form {
+        margin: 0 14px;
+        min-height: 248px;
+    }
+
+    .seach-form__find {
+        display: none;
+    }
+
+    .seach-form__input {
+        max-width: 200px;
+        font-size: 18px;
+        text-align: left;
+    }
+}

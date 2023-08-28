@@ -63,3 +63,15 @@
     font-weight: 400;
     line-height: 18px;
 }
+
+@media screen and (max-width: 740px) {
+
+    .filter-checkbox {
+        margin-top: 42px;
+        gap: 13px;
+    }
+
+    .filter-checkbox__description {
+        font-size: 11px;
+    }
+}
