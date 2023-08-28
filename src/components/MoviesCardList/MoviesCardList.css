@@ -29,6 +29,11 @@
 }
 
 @media screen and (max-width: 1140px) {
+    .movies-card-list__cards {
+        margin: 0 30px;
+        justify-content: center;
+    }
+
     .movies-card-list__button {
         width: 708px;
     }

@@ -7,6 +7,7 @@ import { Register } from "../Register/Register";
 import { Login } from "../Login/Login";
 import { Profile } from "../Profile/Profile";
 import { Movies } from "../Movies/Movies";
+import { SavedMovies } from "../SavedMovies/SavedMovies";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         {/* <Register /> */}
         {/* <Login /> */}
         {/* <Profile /> */}
-        <Movies />
+        <SavedMovies />
       </div>
     </div>
   );

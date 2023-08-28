@@ -35,6 +35,10 @@
     background-image: url("../../images/movies-card-save-active.svg");
 }
 
+.movies-card__save-remove {
+    background-image: url("../../images/movies-card-remove.svg");
+}
+
 .movies-card__title {
     margin: 0;
     color: #000;
@@ -54,4 +58,28 @@
     object-fit: cover;
     max-width: 364px;
     height: 203px;
+}
+
+@media screen and (max-width: 1140px) {
+    .movies-card {
+        max-width: 339px;
+        height: 258px;
+    }
+
+    .movies-card__image {
+        max-width: 339px;
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .movies-card {
+        max-width: 300px;
+        height: 236px;
+    }
+
+    .movies-card__image {
+        max-width: 300px;
+        height: 168px;
+    }
 }

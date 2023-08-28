@@ -44,7 +44,7 @@ function MoviesCard() {
                         <h2 className="movies-card__title">33 слова о дизайне</h2>
                         <p className="movies-card__description">1ч 47м</p>
                     </div>
-                    <div className="movies-card__save"></div>
+                    <div className="movies-card__save movies-card__save-remove"></div>
                 </div>
                 <img src={moviesCard1} alt="" className="movies-card__image" />
             </li>
