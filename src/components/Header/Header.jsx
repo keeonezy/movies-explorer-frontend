@@ -5,7 +5,7 @@ import headerMenu from "../../images/header-menu.svg";
 
 function Header() {
     return (
-        <div className="header">
+        <header className="header">
             {/* <div className="header header__offer"> */}
             <div className="header__container">
                 <div className="header__container-left">
@@ -28,7 +28,7 @@ function Header() {
 
                 <img src={headerMenu} alt="" className="header__menu" />
             </div>
-        </div>
+        </header>
     )
 }
 

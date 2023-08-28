@@ -20,7 +20,7 @@ function Register() {
 
                 <p className="auth__input-name">Пароль</p>
                 <div className="auth__input-design">
-                    <input type="password" className="auth__input auth__text-password" placeholder="Введите почту" required />
+                    <input type="password" className="auth__input auth__text-password" placeholder="Введите пароль" required />
                 </div>
                 <p className="auth__input-text-error">Что-то пошло не так...</p>
 
