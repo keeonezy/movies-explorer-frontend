@@ -1,12 +1,12 @@
 import React from 'react';
 import "./NotFound.css";
 
-function NotFound() {
+function NotFound({ onBack }) {
     return (
         <div className="not-found">
             <h2 className="not-found__title">404</h2>
             <p className="not-found__description">Страница не найдена</p>
-            <button className="not-found__back">Назад</button>
+            <button className="not-found__back" type='button' onClick={onBack}>Назад</button>
         </div>
     )
 }
