@@ -6,6 +6,7 @@ import { NotFound } from "../NotFound/NotFound";
 import { Register } from "../Register/Register";
 import { Login } from "../Login/Login";
 import { Profile } from "../Profile/Profile";
+import { Movies } from "../Movies/Movies";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         {/* <NotFound /> */}
         {/* <Register /> */}
         {/* <Login /> */}
-        <Profile />
+        {/* <Profile /> */}
+        <Movies />
       </div>
     </div>
   );
