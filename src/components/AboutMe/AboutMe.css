@@ -1,16 +1,15 @@
-.student {
+.about-me {
     margin: 0 auto;
     max-width: 1140px;
-    min-height: 1079px;
 }
 
-.student__info {
+.about-me__info {
     margin-top: 110px;
     min-height: 51px;
     border-bottom: 1px solid black;
 }
 
-.student__title {
+.about-me__title {
     margin: 0;
     color: #000;
     font-size: 22px;
@@ -18,17 +17,17 @@
     letter-spacing: -0.88px;
 }
 
-.student__container {
+.about-me__container {
     margin-top: 66px;
     display: flex;
     justify-content: space-between;
 }
 
-.student__container-left {
+.about-me__container-left {
     max-width: 600px;
 }
 
-.student__title-info {
+.about-me__title-info {
     margin: 0;
     color: #000;
     font-size: 50px;
@@ -37,7 +36,7 @@
     letter-spacing: -2px;
 }
 
-.student__description-info {
+.about-me__description-info {
     margin: 0;
     margin-top: 18px;
     color: #000;
@@ -46,7 +45,7 @@
     line-height: 20px;
 }
 
-.student__description {
+.about-me__description {
     margin: 0;
     margin-top: 26px;
     color: #000;
@@ -55,7 +54,7 @@
     line-height: 22px;
 }
 
-.student__button {
+.about-me__button {
     margin-top: 99px;
     color: #000;
     font-size: 14px;
@@ -63,161 +62,111 @@
     display: block;
 }
 
-.student__image {
+.about-me__image {
     max-width: 270px;
     max-height: 327px;
     border-radius: 10px;
 }
 
-.student__title-portfolio {
-    margin: 0;
-    margin-top: 100px;
-    color: #A0A0A0;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 20px;
-}
-
-.student__portfolio {
-    min-height: 91px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #E8E8E8;
-}
-
-.student__portfolio:first-child {
-    margin-top: 50px;
-}
-
-.student-portfolio-description {
-    margin: 0;
-    color: #000;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 50px;
-    letter-spacing: -1.2px;
-}
-
 @media screen and (max-width: 1140px) {
-    .student {
+    .about-me {
         min-height: 994px;
     }
 
-    .student__container-left {
+    .about-me__container-left {
         max-width: 364px;
     }
 
-    .student__info {
+    .about-me__info {
         margin: 90px 50px 0;
     }
 
-    .student__container {
+    .about-me__container {
         margin: 66px 50px 0;
     }
 
-    .student__title-info {
+    .about-me__title-info {
         font-size: 40px;
         letter-spacing: -1.6px;
     }
 
-    .student__description-info {
+    .about-me__description-info {
         margin-top: 16px;
         font-size: 12px;
         line-height: 18px;
     }
 
-    .student__description {
+    .about-me__description {
         margin-top: 20px;
         font-size: 12px;
         line-height: 18px;
     }
 
-    .student__button {
+    .about-me__button {
         margin-top: 87px;
     }
 
-    .student__image {
+    .about-me__image {
         max-width: 255px;
         max-height: 307px;
     }
 
-    .student__title-portfolio {
+    .about-me__title-portfolio {
         margin: 90px 50px 0;
     }
 
-    .student__portfolio {
+    .about-me__portfolio {
         margin: 0 50px;
     }
 
-    .student-portfolio-description {
+    .about-me-portfolio-description {
         font-size: 28px;
     }
 }
 
 @media screen and (max-width: 740px) {
-    .student {
+    .about-me {
         min-height: 1198px;
     }
 
-    .student__info {
+    .about-me__info {
         margin: 70px 14px 0;
     }
 
-    .student__title {
+    .about-me__title {
         font-size: 18px;
         letter-spacing: -0.72px;
     }
 
-    .student__container {
+    .about-me__container {
         margin: 60px 14px 0;
         flex-direction: column-reverse;
         gap: 40px;
     }
 
-    .student__image {
+    .about-me__image {
         max-width: 292px;
         max-height: 352px;
     }
 
-    .student__title-info {
+    .about-me__title-info {
         font-size: 30px;
         letter-spacing: -1.2px;
     }
 
-    .student__description-info {
+    .about-me__description-info {
         margin-top: 20px;
         font-size: 11px;
         line-height: 16px;
     }
 
-    .student__description {
+    .about-me__description {
         margin-top: 20px;
         font-size: 11px;
         line-height: 16px;
     }
 
-    .student__button {
+    .about-me__button {
         margin-top: 40px;
-    }
-
-    .student__title-portfolio {
-        margin: 70px 14px 0;
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    .student__portfolio {
-        margin: 0px 14px;
-    }
-
-    .student__portfolio:first-child {
-        margin-top: 40px;
-    }
-
-    .student-portfolio-description {
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: -0.72px;
     }
 }
