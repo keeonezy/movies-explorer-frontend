@@ -17,8 +17,8 @@ function Navigation({ loggedIn }) {
                     </div>
 
                     <div className="header__container-right">
-                        <button className={`header__signup ${pathname === "/" ? "header__offer-button" : ""}`}>Регистрация</button>
-                        <button className="header__signin">Войти</button>
+                        <button className={`header__signup button ${pathname === "/" ? "header__offer-button" : ""}`}>Регистрация</button>
+                        <button className="header__signin button">Войти</button>
                     </div>
                 </>
             ) : (
@@ -29,12 +29,12 @@ function Navigation({ loggedIn }) {
                         </Link>
 
                         <div className="header__navigation">
-                            <a href="" className="header__link">Фильмы</a>
-                            <a href="" className="header__link">Сохранённые фильмы</a>
+                            <a href="" className="header__link link">Фильмы</a>
+                            <a href="" className="header__link link">Сохранённые фильмы</a>
                         </div>
                     </div>
 
-                    < div className="header__profile">
+                    <div className="header__profile">
                         <p className="header__profile-text">Аккаунт</p>
                         <img src={headerProfile} alt="" className="header__profile-image" />
                     </div >

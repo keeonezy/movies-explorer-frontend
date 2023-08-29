@@ -5,12 +5,12 @@ function MoviesCardList() {
     return (
         <>
             <div className="movies-card-list">
-                <ul className="movies-card-list__cards">
+                <ul className="movies-card-list__cards ul">
                     <MoviesCard />
                 </ul>
             </div>
 
-            <button className="movies-card-list__button">Ещё</button>
+            <button className="movies-card-list__button button">Ещё</button>
         </>
     )
 }

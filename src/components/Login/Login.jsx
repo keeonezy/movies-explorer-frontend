@@ -10,16 +10,16 @@ function Login() {
 
                 <p className="auth__input-name">E-mail</p>
                 <div className="auth__input-design">
-                    <input type="email" className="auth__input" placeholder="Введите почту" required />
+                    <input type="email" className="auth__input input" placeholder="Введите почту" required />
                 </div>
 
                 <p className="auth__input-name">Пароль</p>
                 <div className="auth__input-design">
-                    <input type="password" className="auth__input auth__text-password" placeholder="Введите пароль" required />
+                    <input type="password" className="auth__input auth__text-password input" placeholder="Введите пароль" required />
                 </div>
                 <p className="auth__input-text-error">Что-то пошло не так...</p>
 
-                <button className="auth__form-button auth__form-button-login">Войти</button>
+                <button className="auth__form-button auth__form-button-login button">Войти</button>
 
                 <p className="auth__info">Ещё не зарегистрированы? <span>Регистрация</span></p>
             </form>

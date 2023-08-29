@@ -11,17 +11,17 @@ function Profile() {
                 <form className="profile__form">
                     <fieldset className="profile__data">
                         <label htmlFor="" className="profile__input-label">Имя</label>
-                        <input type="text" className="profile__input" />
+                        <input type="text" className="profile__input input" />
                     </fieldset>
 
                     <fieldset className="profile__data">
                         <label htmlFor="" className="profile__input-label">E-mail</label>
-                        <input type="text" className="profile__input" />
+                        <input type="text" className="profile__input input" />
                     </fieldset>
                 </form>
 
-                <button className="profile__button-edit">Редактировать</button>
-                <button className="profile__button-exit">Выйти из аккаунта</button>
+                <button className="profile__button-edit button">Редактировать</button>
+                <button className="profile__button-exit button">Выйти из аккаунта</button>
             </div>
         </>
     )

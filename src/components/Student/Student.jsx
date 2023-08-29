@@ -22,15 +22,15 @@ function Student() {
             <h3 className="student__title-portfolio">Портфолио</h3>
 
             <div>
-                <a className="student__portfolio" href="https://keeonezy.github.io/how-to-learn/index.html" target="_black">
+                <a className="student__portfolio link" href="https://keeonezy.github.io/how-to-learn/index.html" target="_black">
                     <p className="student-portfolio-description">Статичный сайт</p>
                     <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
                 </a>
-                <a className="student__portfolio" href="https://keeonezy.github.io/russian-travel/index.html" target="_black">
+                <a className="student__portfolio link" href="https://keeonezy.github.io/russian-travel/index.html" target="_black">
                     <p className="student-portfolio-description">Адаптивный сайт</p>
                     <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
                 </a>
-                <a className="student__portfolio" href="https://keeonezy.github.io/mesto-react/index.html" target="_black">
+                <a className="student__portfolio link" href="https://keeonezy.github.io/mesto-react/index.html" target="_black">
                     <p className="student-portfolio-description">Одностраничное приложение</p>
                     <img src={studentArrow} alt="Стрелка для перехода" className="student__arrow" />
                 </a>

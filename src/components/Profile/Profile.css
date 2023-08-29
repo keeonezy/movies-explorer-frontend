@@ -37,8 +37,6 @@
 }
 
 .profile__input {
-    border: transparent;
-    background: transparent;
     text-align: right;
     color: #000;
     font-size: 11px;
@@ -53,9 +51,6 @@
     text-align: center;
     font-size: 13px;
     font-weight: 400;
-    border: transparent;
-    background: transparent;
-    cursor: pointer;
 }
 
 .profile__button-exit {
@@ -65,9 +60,6 @@
     color: #EE3465;
     font-size: 13px;
     font-weight: 500;
-    border: transparent;
-    background: transparent;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 1140px) {

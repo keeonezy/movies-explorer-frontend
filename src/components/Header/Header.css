@@ -24,7 +24,6 @@
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
-    text-decoration: unset;
 }
 
 .header__link:active {
@@ -56,9 +55,6 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    background: transparent;
-    border: transparent;
-    cursor: pointer;
 }
 
 .header__signin {
@@ -66,19 +62,16 @@
     height: 32px;
     border-radius: 3px;
     background: #2BE080;
-    border: transparent;
     color: #000;
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    cursor: pointer;
 }
 
 .header__profile {
     display: flex;
     gap: 17px;
     align-items: center;
-    cursor: pointer;
 }
 
 .header__profile-text {

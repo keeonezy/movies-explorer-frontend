@@ -30,9 +30,6 @@
     text-align: center;
     font-size: 14px;
     font-weight: 400;
-    background: transparent;
-    border: transparent;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 740px) {

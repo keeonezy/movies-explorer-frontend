@@ -23,17 +23,13 @@
     text-align: center;
     font-size: 28px;
     font-weight: 500;
-    border: transparent;
 }
 
 .seach-form__button-next {
     background-image: url(../../images/seachform-next.svg);
     background-repeat: no-repeat;
-    border: transparent;
     width: 34px;
     height: 34px;
-    cursor: pointer;
-    background-color: transparent;
 }
 
 @media screen and (max-width: 1140px) {
