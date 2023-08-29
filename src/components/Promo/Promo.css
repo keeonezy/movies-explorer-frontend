@@ -41,6 +41,9 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 1140px) {
@@ -68,7 +71,6 @@
 
     .promo__button {
         margin: 92px auto 0;
-        display: block;
     }
 }
 

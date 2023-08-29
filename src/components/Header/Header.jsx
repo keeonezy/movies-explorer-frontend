@@ -1,5 +1,5 @@
 import "./Header.css";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import { Navigation } from "../Navigation/Navigation";
 import headerMenu from "../../images/header-menu.svg";
 
@@ -10,7 +10,7 @@ function Header() {
         <header className={`header ${pathname === "/" ? "header__offer" : ""}`}>
             <div className="header__container">
                 <Navigation />
-                <img src={headerMenu} alt="" className="header__menu" />
+                <img src={headerMenu} alt="Иконка меню" className="header__menu" />
             </div>
         </header>
     )

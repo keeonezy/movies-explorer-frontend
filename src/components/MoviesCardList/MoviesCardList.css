@@ -24,8 +24,6 @@
     font-weight: 500;
     background: #F9F9F9;
     border-radius: 6px;
-    border: transparent;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 1140px) {

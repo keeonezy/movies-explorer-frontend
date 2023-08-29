@@ -1,12 +1,15 @@
 import logo from "../../images/logo.svg";
+import { Link } from "react-router-dom";
 
 function Login() {
     return (
         <div className="auth">
-            <img src={logo} alt="" className="header__logo" />
+            <Link to="/" className="link">
+                <img src={logo} alt="Логотип" className="header__logo" />
+            </Link>
             <h2 className="auth__title">Рады видеть!</h2>
 
-            <form className="auth__form" name='form-auth' method="get">
+            <form className="auth__form" name="form-auth" method="get">
 
                 <p className="auth__input-name">E-mail</p>
                 <div className="auth__input-design">

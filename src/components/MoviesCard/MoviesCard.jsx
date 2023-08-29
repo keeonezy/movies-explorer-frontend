@@ -13,7 +13,7 @@ function MoviesCard() {
                     </div>
                     <div className="movies-card__save"></div>
                 </div>
-                <img src={moviesCard1} alt="" className="movies-card__image" />
+                <img src={moviesCard1} alt="Постер фильма" className="movies-card__image" />
             </li>
 
             <li className="movies-card">
@@ -24,7 +24,7 @@ function MoviesCard() {
                     </div>
                     <div className="movies-card__save"></div>
                 </div>
-                <img src={moviesCard2} alt="" className="movies-card__image" />
+                <img src={moviesCard2} alt="Постер фильма" className="movies-card__image" />
             </li>
 
             <li className="movies-card">
@@ -35,7 +35,7 @@ function MoviesCard() {
                     </div>
                     <div className="movies-card__save movies-card__save-active"></div>
                 </div>
-                <img src={moviesCard1} alt="" className="movies-card__image" />
+                <img src={moviesCard1} alt="Постер фильма" className="movies-card__image" />
             </li>
 
             <li className="movies-card">
@@ -46,7 +46,7 @@ function MoviesCard() {
                     </div>
                     <div className="movies-card__save movies-card__save-remove"></div>
                 </div>
-                <img src={moviesCard1} alt="" className="movies-card__image" />
+                <img src={moviesCard1} alt="Постер фильма" className="movies-card__image" />
             </li>
         </>
     )

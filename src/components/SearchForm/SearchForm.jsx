@@ -7,7 +7,7 @@ function SearchForm() {
         <div className="search-form">
             <form action="" className="search-form__form">
                 <fieldset className="search-form__data">
-                    <img src={seachIcon} alt="" className="seach-form__find" />
+                    <img src={seachIcon} alt="Иконка поиска" className="seach-form__find" />
                     <input type="text" className="seach-form__input input" placeholder="Фильм" />
                     <button className="seach-form__button-next button"></button>
                 </fieldset>

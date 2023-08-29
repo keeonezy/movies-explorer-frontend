@@ -55,6 +55,9 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__signin {
@@ -66,6 +69,9 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__profile {
@@ -85,6 +91,7 @@
 .header__profile-image {
     background: #F9F9F9;
     padding: 8px;
+    border-radius: 4px;
 }
 
 .header__offer {
@@ -105,7 +112,12 @@
     }
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 840px) {
+    .header__menu {
+        display: block;
+        cursor: pointer;
+    }
+
     .header__navigation {
         display: none;
     }
@@ -120,10 +132,6 @@
 
     .header__container-right {
         gap: 14px;
-    }
-
-    .header__menu {
-        display: block;
-        cursor: pointer;
+        display: none;
     }
 }
