@@ -11,17 +11,19 @@ function Profile() {
                 <form className="profile__form">
                     <fieldset className="profile__data">
                         <label htmlFor="" className="profile__input-label">Имя</label>
-                        <input type="text" className="profile__input input" />
+                        <input type="text" className="profile__input input" placeholder="Введите имя" />
                     </fieldset>
 
                     <fieldset className="profile__data">
                         <label htmlFor="" className="profile__input-label">E-mail</label>
-                        <input type="text" className="profile__input input" />
+                        <input type="text" className="profile__input input" placeholder="Введите почту" />
                     </fieldset>
                 </form>
 
                 <button className="profile__button-edit button">Редактировать</button>
                 <button className="profile__button-exit button">Выйти из аккаунта</button>
+                <p className="profile__text-error">При обновлении профиля произошла ошибка.</p>
+                <button className="profile__button-save button">Сохранить</button>
             </div>
         </>
     )

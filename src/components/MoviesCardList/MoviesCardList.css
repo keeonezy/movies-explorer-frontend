@@ -24,6 +24,11 @@
     font-weight: 500;
     background: #F9F9F9;
     border-radius: 6px;
+    transition: all 0.5s;
+}
+
+.movies-card-list__button:hover {
+    background: rgba(249, 249, 249, 0.8);
 }
 
 @media screen and (max-width: 1140px) {

@@ -62,6 +62,41 @@
     font-weight: 500;
 }
 
+.profile__button-save {
+    margin: 0 auto;
+    width: 410px;
+    height: 45px;
+    display: block;
+    border-radius: 3px;
+    background: #3456F3;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.profile__button-save-disabled {
+    background: #F8F8F8;
+    color: #C2C2C2;
+}
+
+.profile__button-save:hover {
+    background: rgba(52, 86, 243, 0.8);
+}
+
+.profile__text-error {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    max-width: 410px;
+    color: #FF004C;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 0;
+}
+
 @media screen and (max-width: 1140px) {
     .profile__title {
         margin-top: 236px;
