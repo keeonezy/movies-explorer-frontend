@@ -125,13 +125,26 @@
     .header__profile {
         display: none;
     }
+}
 
+@media screen and (max-width: 740px) {
     .header__container {
         margin: 0 14px;
     }
 
     .header__container-right {
         gap: 14px;
-        display: none;
+    }
+
+    .header__signup {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .header__signin {
+        width: 54px;
+        height: 26px;
+        font-size: 10px;
+        line-height: 16px;
     }
 }

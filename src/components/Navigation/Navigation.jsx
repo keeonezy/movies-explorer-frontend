@@ -2,6 +2,7 @@ import "./Navigation.css";
 import logo from "../../images/logo.svg";
 import headerProfile from "../../images/header-profile.svg";
 import { Link, useLocation, NavLink } from "react-router-dom";
+import headerMenu from "../../images/header-menu.svg";
 
 function Navigation({ loggedIn }) {
     const pathname = useLocation().pathname;
@@ -38,6 +39,8 @@ function Navigation({ loggedIn }) {
                         <p className="header__profile-text">Аккаунт</p>
                         <img src={headerProfile} alt="Иконка профиля" className="header__profile-image" />
                     </NavLink >
+
+                    <img src={headerMenu} alt="Иконка меню" className="header__menu" />
                 </>
             )}
         </>

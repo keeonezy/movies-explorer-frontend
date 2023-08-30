@@ -49,21 +49,21 @@
 @media screen and (max-width: 1140px) {
     .footer {
         min-height: 172px;
+        background-color: white;
     }
 
     .footer__info {
-        margin: 0 50px;
+        margin: 0 30px;
     }
 
     .footer__navigation {
-        margin: 20px 50px 0;
+        margin: 20px 30px 0;
     }
 }
 
 @media screen and (max-width: 740px) {
     .footer {
         min-height: 253px;
-        background-color: white;
     }
 
     .footer__info {
