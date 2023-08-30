@@ -1,16 +1,12 @@
 .search-form {
-    margin: 0 auto;
+    margin: 70px auto 49px;
     max-width: 1140px;
-    min-height: 217px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .search-form__data {
     margin: 0;
     padding: 0;
-    padding-bottom: 15px;
+    padding-bottom: 9px;
     border: 0;
     display: flex;
     justify-content: space-between;
@@ -34,15 +30,13 @@
 
 @media screen and (max-width: 1140px) {
     .search-form {
-        margin: 0 30px;
-        min-height: 246px;
+        margin: 86px 30px 62px;
     }
 }
 
 @media screen and (max-width: 740px) {
     .search-form {
-        margin: 0 14px;
-        min-height: 248px;
+        margin: 92px 14px 50px;
     }
 
     .seach-form__find {
