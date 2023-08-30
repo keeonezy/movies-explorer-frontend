@@ -125,6 +125,10 @@
     .header__profile {
         display: none;
     }
+
+    .header__profile_active {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 740px) {
