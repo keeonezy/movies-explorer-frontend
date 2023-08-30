@@ -9,7 +9,7 @@ function Navigation({ loggedIn }) {
 
     return (
         <>
-            {loggedIn ? (
+            {!loggedIn ? (
                 <>
                     <div className="header__container-left">
                         <Link to="/" className="link">

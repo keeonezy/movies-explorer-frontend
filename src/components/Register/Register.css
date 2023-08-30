@@ -1,7 +1,6 @@
 .auth {
-    margin: 0 auto;
+    margin: 70px auto 0;
     max-width: 396px;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,9 +91,16 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1140px) {
+    .auth {
+        margin: 232px auto 0;
+    }
+}
+
 @media screen and (max-width: 740px) {
 
     .auth {
+        margin: 56px auto 0;
         max-width: 260px;
         align-items: center;
     }
@@ -108,10 +114,20 @@
     }
 
     .auth__form-button {
+        margin-top: 157px;
         width: 260px;
+        font-size: 12px;
     }
 
     .auth__form-button-login {
         margin-top: 267px;
+    }
+
+    .auth__info {
+        font-size: 12px;
+    }
+
+    .auth__info span {
+        font-size: 12px;
     }
 }

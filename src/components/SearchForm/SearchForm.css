@@ -6,7 +6,7 @@
 .search-form__data {
     margin: 0;
     padding: 0;
-    padding-bottom: 9px;
+    padding-bottom: 15px;
     border: 0;
     display: flex;
     justify-content: space-between;
@@ -35,6 +35,10 @@
 }
 
 @media screen and (max-width: 740px) {
+    .search-form__data {
+        padding-bottom: 9px;
+    }
+
     .search-form {
         margin: 92px 14px 50px;
     }
