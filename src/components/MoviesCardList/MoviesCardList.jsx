@@ -8,9 +8,9 @@ function MoviesCardList() {
                 <ul className="movies-card-list__cards ul">
                     <MoviesCard />
                 </ul>
-            </section>
 
-            <button className="movies-card-list__button button">Ещё</button>
+                <button className="movies-card-list__button button">Ещё</button>
+            </section>
         </>
     )
 }

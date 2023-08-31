@@ -7,9 +7,9 @@ function SearchForm() {
         <section className="search-form">
             <form className="search-form__form">
                 <fieldset className="search-form__data">
-                    <img src={seachIcon} alt="Иконка поиска" className="seach-form__find" />
-                    <input type="text" className="seach-form__input input" placeholder="Фильм" required />
-                    <button className="seach-form__button-next button"></button>
+                    <img src={seachIcon} alt="Иконка поиска" className="search-form__find" />
+                    <input type="text" className="search-form__input input" placeholder="Фильм" required />
+                    <button className="search-form__button-next button"></button>
                 </fieldset>
             </form>
 

@@ -25,12 +25,12 @@ function Navigation({ loggedIn }) {
                 <>
                     <div className="header__container-left">
                         <Link to="/" className="link">
-                            <img src={logo} alt="Логотип" className="header__logo" />
+                            <img src={logo} alt="Логотип" className="logo" />
                         </Link>
                     </div>
 
                     <div className="header__container-right">
-                        <NavLink to="/signup" className={`header__signup link ${pathname === "/" ? "header_color" : ""}`}>Регистрация</NavLink>
+                        <NavLink to="/signup" className={`header__signup link ${pathname === "/" ? "promo" : ""}`}>Регистрация</NavLink>
                         <NavLink to="/signin" className="header__signin link">Войти</NavLink>
                     </div>
                 </>
@@ -38,17 +38,17 @@ function Navigation({ loggedIn }) {
                 <>
                     <div className="header__container-left">
                         <Link to="/" className="">
-                            <img src={logo} alt="Логотип" className="header__logo" />
+                            <img src={logo} alt="Логотип" className="logo" />
                         </Link>
 
                         <nav className="header__navigation">
-                            <NavLink to="/movies" className={`header__link link ${pathname === "/" ? "header_color" : ""}`}>Фильмы</NavLink>
-                            <NavLink to="/saved-movies" className={`header__link link ${pathname === "/" ? "header_color" : ""}`}>Сохранённые фильмы</NavLink>
+                            <NavLink to="/movies" className={`header__link link ${pathname === "/" ? "promo" : ""}`}>Фильмы</NavLink>
+                            <NavLink to="/saved-movies" className={`header__link link ${pathname === "/" ? "promo" : ""}`}>Сохранённые фильмы</NavLink>
                         </nav>
                     </div>
 
                     <NavLink to="/profile" className="header__profile link">
-                        <p className={`header__profile-text ${pathname === "/" ? "header_color" : ""}`}>Аккаунт</p>
+                        <p className={`header__profile-text ${pathname === "/" ? "promo" : ""}`}>Аккаунт</p>
                         <img src={headerProfile} alt="Иконка профиля" className="header__profile-image" />
                     </NavLink >
 

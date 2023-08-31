@@ -1,12 +1,11 @@
 .movies-card-list {
     margin: 0 auto;
-    padding: 70px 0 30px 0;
     max-width: 1140px;
 }
 
 .movies-card-list__cards {
     margin: 0;
-    padding: 0;
+    padding: 70px 0 30px 0;
     display: flex;
     gap: 30px 24px;
     flex-wrap: wrap;
@@ -46,6 +45,7 @@
     .movies-card-list {
         padding: 40px 10px 30px;
     }
+
     .movies-card-list__cards {
         gap: 16px;
     }

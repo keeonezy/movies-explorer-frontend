@@ -13,7 +13,7 @@
     border-bottom: 1px solid #E8E8E8;
 }
 
-.seach-form__input {
+.search-form__input {
     margin: 0;
     color: #A0A0A0;
     text-align: center;
@@ -21,7 +21,7 @@
     font-weight: 500;
 }
 
-.seach-form__button-next {
+.search-form__button-next {
     background-image: url(../../images/seachform-next.svg);
     background-repeat: no-repeat;
     width: 34px;
@@ -43,11 +43,11 @@
         margin: 92px 14px 50px;
     }
 
-    .seach-form__find {
+    .search-form__find {
         display: none;
     }
 
-    .seach-form__input {
+    .search-form__input {
         max-width: 200px;
         font-size: 18px;
         text-align: left;

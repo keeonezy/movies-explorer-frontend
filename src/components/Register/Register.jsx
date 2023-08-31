@@ -6,7 +6,7 @@ function Register() {
     return (
         <section className="auth">
             <Link to="/" className="link">
-                <img src={logo} alt="Логотип" className="header__logo" />
+                <img src={logo} alt="Логотип" className="logo" />
             </Link>
             <h2 className="auth__title">Добро пожаловать!</h2>
 
