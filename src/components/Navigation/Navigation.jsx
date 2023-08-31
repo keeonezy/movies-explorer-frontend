@@ -30,7 +30,7 @@ function Navigation({ loggedIn }) {
                     </div>
 
                     <div className="header__container-right">
-                        <NavLink to="/signup" className={`header__signup link ${pathname === "/" ? "header__offer-button" : ""}`}>Регистрация</NavLink>
+                        <NavLink to="/signup" className={`header__signup link ${pathname === "/" ? "header_offer-button-change" : ""}`}>Регистрация</NavLink>
                         <NavLink to="/signin" className="header__signin link">Войти</NavLink>
                     </div>
                 </>
@@ -41,10 +41,10 @@ function Navigation({ loggedIn }) {
                             <img src={logo} alt="Логотип" className="header__logo" />
                         </Link>
 
-                        <div className="header__navigation">
+                        <nav className="header__navigation">
                             <NavLink to="/movies" className="header__link link">Фильмы</NavLink>
                             <NavLink to="/saved-movies" className="header__link link">Сохранённые фильмы</NavLink>
-                        </div>
+                        </nav>
                     </div>
 
                     <NavLink to="/profile" className="header__profile link">

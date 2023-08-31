@@ -34,7 +34,7 @@ function AboutProject() {
                     <p className="about-project__progress-name">Front-end</p>
                 </div>
             </div>
-        </section >
+        </section>
     )
 }
 

@@ -10,12 +10,12 @@ function Profile({ loggedIn }) {
 
                 <form className="profile__form">
                     <fieldset className="profile__data">
-                        <label htmlFor="" className="profile__input-label">Имя</label>
+                        <label className="profile__input-label">Имя</label>
                         <input type="text" className="profile__input input" placeholder="Введите имя" />
                     </fieldset>
 
                     <fieldset className="profile__data">
-                        <label htmlFor="" className="profile__input-label">E-mail</label>
+                        <label className="profile__input-label">E-mail</label>
                         <input type="text" className="profile__input input" placeholder="Введите почту" />
                     </fieldset>
                 </form>
