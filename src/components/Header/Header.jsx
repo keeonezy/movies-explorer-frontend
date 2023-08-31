@@ -6,7 +6,7 @@ function Header({ loggedIn }) {
     const pathname = useLocation().pathname;
 
     return (
-        <header className={`header ${pathname === "/" ? "header_offer-change" : ""}`}>
+        <header className={`header ${pathname === "/" ? "header_offer" : ""}`}>
             <div className="header__container">
                 <Navigation loggedIn={loggedIn} />
             </div>

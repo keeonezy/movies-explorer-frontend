@@ -94,16 +94,16 @@
     border-radius: 4px;
 }
 
-.header_offer-change {
+.header__menu {
+    display: none;
+}
+
+.header_offer {
     background: #465DFF;
 }
 
-.header_offer-button-change {
+.header_color {
     color: white;
-}
-
-.header__menu {
-    display: none;
 }
 
 @media screen and (max-width: 1140px) {
