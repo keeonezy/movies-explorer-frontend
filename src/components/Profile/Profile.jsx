@@ -1,10 +1,10 @@
 import "./Profile.css";
 import { Header } from "../Header/Header";
 
-function Profile() {
+function Profile({ loggedIn }) {
     return (
         <>
-            <Header />
+            <Header loggedIn={loggedIn} />
             <div className="profile">
                 <h2 className="profile__title">Привет, Виталий!</h2>
 

@@ -22,12 +22,12 @@ function App() {
     <div className="body">
       <div className="page">
         <Routes>
-          <Route path="/" element={< Main />}></Route>
+          <Route path="/" element={< Main loggedIn={loggedIn} />}></Route>
           <Route path="/signin" element={< Login />}></Route>
           <Route path="/signup" element={< Register />}></Route>
-          <Route path="/profile" element={< Profile />}></Route>
-          <Route path="/movies" element={< Movies />}></Route>
-          <Route path="/saved-movies" element={< SavedMovies />}></Route>
+          <Route path="/profile" element={< Profile loggedIn={loggedIn} />}></Route>
+          <Route path="/movies" element={< Movies loggedIn={loggedIn} />}></Route>
+          <Route path="/saved-movies" element={< SavedMovies loggedIn={loggedIn} />}></Route>
           <Route path="*" element={<NotFound onBack={backPage} />}></Route>
         </Routes>
       </div>
