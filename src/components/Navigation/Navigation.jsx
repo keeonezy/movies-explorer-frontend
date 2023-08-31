@@ -25,7 +25,7 @@ function Navigation({ loggedIn }) {
                 <>
                     <div className="header__container-left">
                         <Link to="/" className="link">
-                            <img src={logo} alt="Логотип" className="logo" />
+                            <img src={logo} alt="Логотип" className="header__logo logo" />
                         </Link>
                     </div>
 
@@ -38,7 +38,7 @@ function Navigation({ loggedIn }) {
                 <>
                     <div className="header__container-left">
                         <Link to="/" className="">
-                            <img src={logo} alt="Логотип" className="logo" />
+                            <img src={logo} alt="Логотип" className="header__logo logo" />
                         </Link>
 
                         <nav className="header__navigation">

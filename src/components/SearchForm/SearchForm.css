@@ -26,6 +26,11 @@
     background-repeat: no-repeat;
     width: 34px;
     height: 34px;
+    transition: all 0.5s;
+}
+
+.search-form__button-next:hover {
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 1140px) {
