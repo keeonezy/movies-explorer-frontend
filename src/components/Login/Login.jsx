@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
     return (
-        <div className="auth">
+        <section className="auth">
             <Link to="/" className="link">
                 <img src={logo} alt="Логотип" className="header__logo" />
             </Link>
@@ -26,7 +26,7 @@ function Login() {
 
                 <p className="auth__info">Ещё не зарегистрированы? <span>Регистрация</span></p>
             </form>
-        </div>
+        </section>
     )
 }
 

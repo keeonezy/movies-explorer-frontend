@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Register() {
     return (
-        <div className="auth">
+        <section className="auth">
             <Link to="/" className="link">
                 <img src={logo} alt="Логотип" className="header__logo" />
             </Link>
@@ -31,7 +31,7 @@ function Register() {
 
                 <p className="auth__info">Уже зарегистрированы? <span>Войти</span></p>
             </form>
-        </div>
+        </section>
     )
 }
 

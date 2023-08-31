@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Promo() {
     return (
-        <div className="promo">
+        <section className="promo">
             <div className="promo__container">
                 <div className="promo__container-left">
                     <h1 className="promo__title">Учебный проект студента факультета Веб-разработки.</h1>
@@ -13,7 +13,7 @@ function Promo() {
                 </div>
                 <img src={promoImage} alt="Планета из слов веб" className="promo__image" />
             </div>
-        </div>
+        </section>
     )
 }
 

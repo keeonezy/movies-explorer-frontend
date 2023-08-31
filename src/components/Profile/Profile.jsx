@@ -5,7 +5,7 @@ function Profile({ loggedIn }) {
     return (
         <>
             <Header loggedIn={loggedIn} />
-            <div className="profile">
+            <section className="profile">
                 <h2 className="profile__title">Привет, Виталий!</h2>
 
                 <form className="profile__form">
@@ -24,7 +24,7 @@ function Profile({ loggedIn }) {
                 <button className="profile__button-exit button">Выйти из аккаунта</button>
                 <p className="profile__text-error">При обновлении профиля произошла ошибка.</p>
                 <button className="profile__button-save button">Сохранить</button>
-            </div>
+            </section>
         </>
     )
 }
