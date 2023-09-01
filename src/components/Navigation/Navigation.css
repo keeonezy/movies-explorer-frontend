@@ -10,6 +10,7 @@
     display: flex;
     opacity: 0;
     transition: visibility 0.4s, opacity 0.4s linear;
+    z-index: 2;
 }
 
 .menu_active {
