@@ -12,7 +12,6 @@ class MainApi {
         if (res.ok) {
             return res.json();
         }
-
         return Promise.reject(`Ошибка: ${res.status}`);
     }
 
@@ -21,9 +20,8 @@ class MainApi {
         return this._request(url, options).then(this._checkResponse)
     }
 
-
+    // Токен
     setToken = (token) => this._headersWithToken = { ...this._headersWithToken, Authorization: `Bearer ${token}` }
-
 
     registerUser(userData) {
         return this._request(`${this._url}/signup`, {
@@ -32,7 +30,6 @@ class MainApi {
             body: JSON.stringify(userData),
         })
     }
-
 
     loginUser(userData) {
         return this._request(`${this._url}/signin`, {
@@ -52,7 +49,6 @@ class MainApi {
         return this._request(`${this._url}/movies`, {
             headers: this._headersWithToken,
         })
-
     }
 
     patchUser(userData) {
@@ -62,7 +58,6 @@ class MainApi {
             body: JSON.stringify(userData),
         })
     }
-
 
     postMovie(movie) {
         return this._request(`${this._url}/movies`, {

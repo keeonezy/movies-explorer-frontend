@@ -10,6 +10,8 @@ import { Profile } from "../Profile/Profile";
 import { Movies } from "../Movies/Movies";
 import { SavedMovies } from "../SavedMovies/SavedMovies";
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import mainApi from '../../utils/MainApi';
+import moviesApi from '../../utils/MoviesApi';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({ name: "", email: "" });
