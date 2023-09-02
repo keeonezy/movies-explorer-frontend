@@ -28,7 +28,7 @@ class MainApi {
     registerUser(userData) {
         return this._request(`${this._url}/signup`, {
             method: "POST",
-            headers: this.headers,
+            headers: this._headers,
             body: JSON.stringify(userData),
         })
     }
@@ -37,7 +37,7 @@ class MainApi {
     loginUser(userData) {
         return this._request(`${this._url}/signin`, {
             method: "POST",
-            headers: this.headers,
+            headers: this._headers,
             body: JSON.stringify(userData),
         })
     }
