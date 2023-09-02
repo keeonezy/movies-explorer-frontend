@@ -3,10 +3,10 @@ import { SearchForm } from "../SearchForm/SearchForm";
 import { MoviesCardList } from "../MoviesCardList/MoviesCardList";
 import { Footer } from "../Footer/Footer";
 
-function Movies({loggedIn}) {
+function Movies({isLoggedIn}) {
     return (
         <>
-            <Header loggedIn={loggedIn} />
+            <Header isLoggedIn={isLoggedIn} />
             <main className="main">
                 <SearchForm />
                 <MoviesCardList />

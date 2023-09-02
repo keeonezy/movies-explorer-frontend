@@ -1,10 +1,10 @@
 import "./Profile.css";
 import { Header } from "../Header/Header";
 
-function Profile({ loggedIn }) {
+function Profile({ isLoggedIn }) {
     return (
         <>
-            <Header loggedIn={loggedIn} />
+            <Header isLoggedIn={isLoggedIn} />
             <section className="profile">
                 <h2 className="profile__title">Привет, Виталий!</h2>
 

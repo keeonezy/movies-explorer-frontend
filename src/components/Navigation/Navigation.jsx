@@ -5,7 +5,7 @@ import React from "react";
 import { Link, useLocation, NavLink } from "react-router-dom";
 import headerMenu from "../../images/header-menu.svg";
 
-function Navigation({ loggedIn }) {
+function Navigation({ isLoggedIn }) {
     const pathname = useLocation().pathname;
 
     const [menuOpen, setMenuOpen] = React.useState(false);
@@ -21,7 +21,7 @@ function Navigation({ loggedIn }) {
 
     return (
         <>
-            {!loggedIn ? (
+            {!isLoggedIn ? (
                 <>
                     <div className="header__container-left">
                         <Link to="/" className="link">
