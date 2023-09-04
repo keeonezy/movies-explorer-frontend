@@ -1,7 +1,7 @@
 import "./Profile.css";
 import { Header } from "../Header/Header";
 
-function Profile({ isLoggedIn }) {
+function Profile({ isLoggedIn, handleSignOut }) {
     return (
         <>
             <Header isLoggedIn={isLoggedIn} />
@@ -21,7 +21,7 @@ function Profile({ isLoggedIn }) {
                 </form>
 
                 <button className="profile__button-edit button">Редактировать</button>
-                <button className="profile__button-exit button">Выйти из аккаунта</button>
+                <button onClick={handleSignOut} className="profile__button-exit button">Выйти из аккаунта</button>
                 <p className="profile__text-error">При обновлении профиля произошла ошибка.</p>
                 <button className="profile__button-save button">Сохранить</button>
             </section>

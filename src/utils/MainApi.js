@@ -1,87 +1,105 @@
 import { API_URL } from "./constants";
 
 class MainApi {
-    constructor({ url, headers }) {
-        this.url = url;
-        this.headers = headers;
-        this.headersWithToken = { ...headers, Authorization: null };
-    }
+  constructor({ url, headers }) {
+    this.url = url;
+    this.headers = headers;
+  }
 
-    // Проверяем на ошибку
-    _checkResponse(res) {
-        if (res.ok) {
-            return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
+  // Проверяем на ошибку
+  _checkResponse(res) {
+    if (res.ok) {
+      return res.json();
     }
+    return Promise.reject(`Ошибка: ${res.status}`);
+  }
+  register(data) {
+    return fetch(`${this.url}/signup`, {
+      method: "POST",
+      headers: this.headers,
+      body: JSON.stringify({ name: data.name, email: data.email, password: data.password })
+    })
+      .then(res => this._checkResponse(res))
+  }
 
-    // Проверяем promise
-    _request(url, options) {
-        return this._request(url, options).then(this._checkResponse)
-    }
+  login(data) {
+    return fetch(`${this.url}/signin`, {
+      method: "POST",
+      headers: this.headers,
+      body: JSON.stringify({ email: data.email, password: data.password })
+    })
+      .then(res => this._checkResponse(res))
+      .then(res => { localStorage.setItem("token", res.token) })
+  }
 
-    // Токен
-    setToken = (token) => this.headersWithToken = { ...this.headersWithToken, Authorization: `Bearer ${token}` }
+  checkToken(jwt) {
+    return fetch(`${this.url}/users/me`, {
+      method: "GET",
+      headers: { ...this.headers, "Authorization": `Bearer ${jwt}` }
+    })
+      .then(res => this._checkResponse(res))
+  }
 
-    register(userData) {
-        return fetch(`${this.url}/signup`, {
-            method: 'POST',
-            headers: this.headers,
-            body: JSON.stringify(userData),
-        })
-            .then(this._checkResponse);
-    }
+  getUserInfo(jwt) {
+    return fetch(`${this.url}/users/me`, {
+      method: "GET",
+      headers: { ...this.headers, "Authorization": `Bearer ${jwt}` }
+    })
+      .then(res => this._checkResponse(res))
+  }
 
-    login(userData) {
-        return fetch(`${this.url}/signin`, {
-            method: 'POST',
-            headers: this.headers,
-            body: JSON.stringify(userData),
-        })
-            .then(this._checkResponse);
-    }
+  updateUserInfo(data, jwt) {
+    return fetch(`${this.url}/users/me`, {
+      method: "PATCH",
+      headers: { ...this.headers, "Authorization": `Bearer ${jwt}` },
+      body: JSON.stringify({ name: data.name, email: data.email })
+    })
+      .then(res => this._checkResponse(res))
+  }
 
-    getUser() {
-        return this._request(`${this.url}/users/me`, {
-            headers: this.headersWithToken,
-        })
-    }
+  getSaveMovies(jwt) {
+    return fetch(`${this.url}/movies`, {
+      method: "GET",
+      headers: { ...this.headers, "Authorization": `Bearer ${jwt}` }
+    })
+      .then(res => this._checkResponse(res))
+  }
 
-    getMovies() {
-        return this._request(`${this.url}/movies`, {
-            headers: this.headersWithToken,
-        })
-    }
+  postSaveMovie(movie, jwt) {
+    return fetch(`${this.url}/movies`, {
+      method: "POST",
+      headers: { ...this.headers, "Authorization": `Bearer ${jwt}` },
+      body: JSON.stringify({
+        country: movie.country,
+        director: movie.director,
+        duration: movie.duration,
+        year: movie.year,
+        description: movie.description,
+        image: `https://api.nomoreparties.co${movie.image.url}`,
+        trailerLink: movie.trailerLink,
+        nameRU: movie.nameRU,
+        nameEN: movie.nameEN,
+        thumbnail: `https://api.nomoreparties.co${movie.image.formats.thumbnail.url}`,
+        movieId: movie.id
+      })
+    })
+      .then(res => this._checkResponse(res))
+  }
 
-    patchUser(userData) {
-        return this._request(`${this.url}/users/me`, {
-            method: "PATCH",
-            headers: this.headersWithToken,
-            body: JSON.stringify(userData),
-        })
-    }
-
-    postMovie(movie) {
-        return this._request(`${this.url}/movies`, {
-            method: "POST",
-            headers: this.headersWithToken,
-            body: JSON.stringify(movie),
-        })
-    }
-
-    deleteMovie(movieId) {
-        return this._request(`${this.url}/movies/${movieId}`, {
-            method: "DELETE",
-            headers: this.headersWithToken,
-        })
-    }
+  deleteSaveMovie(movieId, jwt) {
+    return fetch(`${this.url}/movies/${movieId}`, {
+      method: "DELETE",
+      headers: { ...this.headers, "Authorization": `Bearer ${jwt}` }
+    })
+      .then(res => this._checkResponse(res))
+  }
 }
 
 const mainApi = new MainApi({
-    url: API_URL,
-    headers: {
-        "Content-Type": "application/json",
-    },
+  url: API_URL,
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 export default mainApi;

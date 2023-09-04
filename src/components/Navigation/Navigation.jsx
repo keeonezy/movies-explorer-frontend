@@ -54,7 +54,7 @@ function Navigation({ isLoggedIn }) {
 
                     <img src={headerMenu} alt="Иконка меню" className="header__menu" onClick={handleMenuButtonClick} />
 
-                    <div className={`menu ${menuOpen ? 'menu_active' : ''}`}>
+                    <div className={`menu ${menuOpen ? "menu_active" : ""}`}>
                         <div className="menu__container">
                             <button className="menu__button-close button" onClick={handleCloseMenuButtonClick}></button>
                             <ul className="menu__links ul">
