@@ -10,20 +10,20 @@ function Register() {
             </Link>
             <h2 className="auth__title">Добро пожаловать!</h2>
 
-            <form className="auth__form" name="form-auth" method="get">
+            <form className="auth__form" name="form-auth" method="get" noValidate>
                 <p className="auth__input-name">Имя</p>
                 <div className="auth__input-design">
-                    <input type="text" className="auth__input input" placeholder="Введите имя" required />
+                    <input type="text" className="auth__input input" minLength="2" maxLength="30" placeholder="Введите имя" required />
                 </div>
 
                 <p className="auth__input-name">E-mail</p>
                 <div className="auth__input-design">
-                    <input type="email" className="auth__input input" placeholder="Введите почту" required />
+                    <input type="email" className="auth__input input" minLength="5" maxLength="30" placeholder="Введите почту" required />
                 </div>
 
                 <p className="auth__input-name">Пароль</p>
                 <div className="auth__input-design">
-                    <input type="password" className="auth__input auth__text-password input auth__input-error" placeholder="Введите пароль" required />
+                    <input type="password" className="auth__input auth__text-password input auth__input-error" minLength="5" maxLength="30" placeholder="Введите пароль" required />
                 </div>
                 <p className="auth__input-text-error">Что-то пошло не так...</p>
 

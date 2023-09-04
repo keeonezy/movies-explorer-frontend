@@ -9,16 +9,16 @@ function Login() {
             </Link>
             <h2 className="auth__title">Рады видеть!</h2>
 
-            <form className="auth__form" name="form-auth" method="get">
+            <form className="auth__form" name="form-auth" method="get" noValidate>
 
                 <p className="auth__input-name">E-mail</p>
                 <div className="auth__input-design">
-                    <input type="email" className="auth__input input" placeholder="Введите почту" required />
+                    <input type="email" className="auth__input input" minLength="2" maxLength="30" placeholder="Введите почту" required />
                 </div>
 
                 <p className="auth__input-name">Пароль</p>
                 <div className="auth__input-design">
-                    <input type="password" className="auth__input auth__text-password input" placeholder="Введите пароль" required />
+                    <input type="password" className="auth__input auth__text-password input" minLength="5" maxLength="30" placeholder="Введите пароль" required />
                 </div>
                 <p className="auth__input-text-error">Что-то пошло не так...</p>
 
