@@ -5,7 +5,7 @@ import useValidation from "../../hooks/useValidation";
 
 function Login(props) {
 
-    const { data, errors, onChange, resetValidation, isFormValid } = useValidation();
+    const { values, errors, onChange, resetValidation, isFormValid } = useValidation();
     const { loggedIn, handleLogin, errorMessage, setErrorMessage } = props;
 
     useEffect(() => {
@@ -19,7 +19,7 @@ function Login(props) {
 
     function handleSubmitLogin(evt) {
         evt.preventDefault();
-        handleLogin(data);
+        handleLogin(values);
     }
 
     return (
@@ -29,23 +29,23 @@ function Login(props) {
             </Link>
             <h1 className="auth__title">Рады видеть!</h1>
 
-            <form onSubmit={handleSubmitLogin} className="auth__form" name="form-auth" method="get" noValidate>
+            <form onSubmit={handleSubmitLogin} className="auth__form" name="form-auth">
 
                 <p className="auth__input-name">E-mail</p>
                 <div className="auth__input-design">
-                    <input onChange={onChange} value={data.email || ""} name="email" type="email" className="auth__input input" minLength="2" maxLength="30" placeholder="Введите почту" required />
+                    <input onChange={onChange} value={values.email || ""} name="email" type="email" className="auth__input input" minLength="2" maxLength="30" placeholder="Введите почту" required />
                 </div>
                 <p className="auth__input-text-error">{errors.email || ""}</p>
 
                 <p className="auth__input-name">Пароль</p>
                 <div className="auth__input-design">
-                    <input onChange={onChange} value={data.password || ""} name="password" type="password" className="auth__input auth__text-password input" minLength="5" maxLength="30" placeholder="Введите пароль" required />
+                    <input onChange={onChange} value={values.password || ""} name="password" type="password" className="auth__input auth__text-password input" minLength="5" maxLength="30" placeholder="Введите пароль" required />
                 </div>
                 <p className="auth__input-text-error">{errors.password || ""}</p>
 
                 <button className="auth__form-button auth__form-button-login button">Войти</button>
 
-                <p className="auth__info">Ещё не зарегистрированы? <span>Регистрация</span></p>
+                <p className="auth__info">Ещё не зарегистрированы? <Link to="/signup" className="link">Регистрация</Link></p>
             </form>
         </section>
     )

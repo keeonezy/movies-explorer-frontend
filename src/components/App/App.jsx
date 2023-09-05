@@ -11,6 +11,7 @@ import { SavedMovies } from "../SavedMovies/SavedMovies";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import mainApi from "../../utils/MainApi";
 import moviesApi from "../../utils/MoviesApi";
+import ProtectedRoute from "../../hooks/protectedRoute";
 
 function App() {
   const [currentUser, setCurrentUser] = React.useState({});
@@ -45,12 +46,12 @@ function App() {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     tokenCheck();
   }, []);
 
-  function handleLogin(data, timeout) {
-    mainApi.login(data)
+  function handleLogin(values, timeout) {
+    mainApi.login(values)
       .then(() => {
         const jwt = localStorage.getItem("token");
         mainApi.getUserInfo(jwt)
@@ -75,14 +76,14 @@ function App() {
       });
   }
 
-  function handleRegister(data) {
-    mainApi.register(data)
+  function handleRegister(values) {
+    mainApi.register(values)
       .then(() => {
         setRegedIn(true);
         setErrorMessage(
           "Регистрация прошла успешно!"
         );
-        handleLogin(data, 2000);
+        handleLogin(values, 2000);
       })
       .catch((err) => {
         err.then((e) => setErrorMessage(e.message));
@@ -100,6 +101,7 @@ function App() {
     navigate("/");
   }
 
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="body">
@@ -111,29 +113,39 @@ function App() {
 
             <Route path="/signin" element={< Login
               isLoggedIn={isLoggedIn}
-              handleLogin={handleLogin}
               errorMessage={errorMessage}
               setErrorMessage={setErrorMessage}
+              handleLogin={handleLogin}
             />}></Route>
 
             <Route path="/signup" element={< Register
               isLoggedIn={isLoggedIn}
+              errorMessage={errorMessage}
+              setErrorMessage={setErrorMessage}
               handleRegister={handleRegister}
+            />}></Route>
+
+            <Route path="/profile" element={< ProtectedRoute
+              element={Profile}
+              isLoggedIn={isLoggedIn}
+              errorMessage={errorMessage}
+              setErrorMessage={setErrorMessage}
+              currentUser={currentUser}
+              handleSignOut={handleSignOut}
+            />}></Route>
+
+            <Route path="/movies" element={< ProtectedRoute
+              element={Movies}
+              isLoggedIn={isLoggedIn}
               errorMessage={errorMessage}
               setErrorMessage={setErrorMessage}
             />}></Route>
 
-            <Route path="/profile" element={< Profile
+            <Route path="/saved-movies" element={< ProtectedRoute
+              element={SavedMovies}
               isLoggedIn={isLoggedIn}
-              handleSignOut={handleSignOut}
-            />}></Route>
-
-            <Route path="/movies" element={< Movies
-              isLoggedIn={isLoggedIn}
-            />}></Route>
-
-            <Route path="/saved-movies" element={< SavedMovies
-              isLoggedIn={isLoggedIn}
+              errorMessage={errorMessage}
+              setErrorMessage={setErrorMessage}
             />}></Route>
 
             <Route path="*" element={<NotFound

@@ -83,7 +83,7 @@
     font-weight: 400;
 }
 
-.auth__info span {
+.auth__info a {
     color: #FF6838;
     text-align: center;
     font-size: 14px;
