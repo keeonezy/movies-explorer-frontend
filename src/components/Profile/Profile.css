@@ -69,17 +69,25 @@
     display: block;
     border-radius: 3px;
     background: #3456F3;
+    border: transparent;
     color: #FFF;
     text-align: center;
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
     transition: all 0.5s;
-    opacity: 0;
 }
 
 .profile__button-save-disabled {
     background: #F8F8F8;
     color: #C2C2C2;
+    opacity: 0;
+}
+
+.profile__button-save-inactive {
+    background: #F8F8F8;
+    color: #C2C2C2;
+    cursor: not-allowed;
 }
 
 .profile__button-save:hover {
@@ -94,7 +102,6 @@
     text-align: center;
     font-size: 11px;
     font-weight: 400;
-    opacity: 0;
 }
 
 @media screen and (max-width: 1140px) {

@@ -1,25 +1,29 @@
 import logo from "../../images/logo.svg";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import useValidation from "../../hooks/useValidation";
 
 function Login(props) {
 
-    const { values, errors, onChange, resetValidation, isFormValid } = useValidation();
-    const { loggedIn, handleLogin, errorMessage, setErrorMessage } = props;
+    const { formValues, handleFormChange, formErrors, isFormValid, resetForm } = useValidation();
+
+    const { isLoggedIn, handleLogin, errorMessage, setErrorMessage } = props;
+
+    const navigate = useNavigate();
 
     useEffect(() => {
-        setErrorMessage("");
-        resetValidation({ email: "", password: "" });
-    }, []);
+        if (isLoggedIn) resetForm();
+    }, [isLoggedIn, resetForm]);
 
-    if (loggedIn) {
-        return <Navigate to="/movies" replace />;
-    }
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigate("/movies", { replace: true });
+        }
+    }, [navigate, isLoggedIn]);
 
     function handleSubmitLogin(evt) {
         evt.preventDefault();
-        handleLogin(values);
+        handleLogin(formValues);
     }
 
     return (
@@ -33,17 +37,17 @@ function Login(props) {
 
                 <p className="auth__input-name">E-mail</p>
                 <div className="auth__input-design">
-                    <input onChange={onChange} value={values.email || ""} name="email" type="email" className="auth__input input" minLength="2" maxLength="30" placeholder="Введите почту" required />
+                    <input onChange={handleFormChange} value={formValues.email || ""} name="email" type="email" className="auth__input input" minLength="2" maxLength="30" placeholder="Введите почту" required />
                 </div>
-                <p className="auth__input-text-error">{errors.email || ""}</p>
+                <p className="auth__input-text-error">{formErrors.email || ""}</p>
 
                 <p className="auth__input-name">Пароль</p>
                 <div className="auth__input-design">
-                    <input onChange={onChange} value={values.password || ""} name="password" type="password" className="auth__input auth__text-password input" minLength="5" maxLength="30" placeholder="Введите пароль" required />
+                    <input onChange={handleFormChange} value={formValues.password || ""} name="password" type="password" className="auth__input auth__text-password input" minLength="5" maxLength="30" placeholder="Введите пароль" required />
                 </div>
-                <p className="auth__input-text-error">{errors.password || ""}</p>
+                <p className="auth__input-text-error">{formErrors.password || ""}</p>
 
-                <button className="auth__form-button auth__form-button-login button">Войти</button>
+                <button disabled={!isFormValid} className={`auth__form-button auth__form-button-login button ${!isFormValid && "auth__form-button-disabled"}`}>Войти</button>
 
                 <p className="auth__info">Ещё не зарегистрированы? <Link to="/signup" className="link">Регистрация</Link></p>
             </form>

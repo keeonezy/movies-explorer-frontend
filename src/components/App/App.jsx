@@ -101,6 +101,17 @@ function App() {
     navigate("/");
   }
 
+  function handleUpdateUser(values) {
+    const jwt = localStorage.getItem("token");
+    mainApi.updateUserInfo(values, jwt)
+      .then((res) => {
+        setErrorMessage("Данные успешно изменены");
+        setCurrentUser(res);
+      })
+      .catch((err) => {
+        setErrorMessage(err.message);
+      });
+  }
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -132,6 +143,7 @@ function App() {
               setErrorMessage={setErrorMessage}
               currentUser={currentUser}
               handleSignOut={handleSignOut}
+              handleUpdateUser={handleUpdateUser}
             />}></Route>
 
             <Route path="/movies" element={< ProtectedRoute

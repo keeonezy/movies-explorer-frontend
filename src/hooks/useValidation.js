@@ -1,56 +1,34 @@
 import React from "react";
-import { REG_NAME, REG_EMAIL } from "../utils/constants";
 
 function useValidation() {
-  const [values, setValues] = React.useState({});
-  const [errors, setErrors] = React.useState({});
+  const [formValues, setFormValues] = React.useState({});
+  const [formErrors, setFormErrors] = React.useState({});
   const [isFormValid, setIsFormValid] = React.useState(false);
 
-  function onChange(evt) {
-    let errorMessage = evt.target.validationMessage;
-    const { name, type, checked } = evt.target;
+  const handleFormChange = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+    setFormValues({ ...formValues, [name]: value });
+    setFormErrors({ ...formErrors, [name]: e.target.validationMessage });
+    setIsFormValid(e.target.closest("form").checkValidity());
+  };
 
-    let { value } = evt.target;
-    if (type === "checkbox") {
-      value = checked;
-    }
-    if (errorMessage === "") {
-      let isInputValid;
-      if (name === "name" && value !== undefined) {
-        isInputValid = value.match(REG_NAME);
-        if (!isInputValid) {
-          errorMessage = "Разрешено использовать только латиницу, кириллицу, пробел и дефис";
-        }
-      } else if (name === "email" && value !== undefined) {
-        isInputValid = value.match(REG_EMAIL);
-        if (!isInputValid) {
-          errorMessage = "Не корректный адрес электронной почты";
-        }
-      }
-    }
-
-    const newValues = { ...values, [name]: value };
-    const newErrors = { ...errors, [name]: errorMessage };
-    const formValid = evt.target.closest("form").checkValidity();
-    setIsFormValid(formValid);
-    setValues(newValues);
-    setErrors(newErrors);
-  }
-
-  function resetValidation(values = {}, errors = {}) {
-    setValues(values);
-    setErrors(errors);
-  }
+  const resetForm = React.useCallback(
+    (newFormValues = {}, newFormErrors = {}, newIsFormValid = false) => {
+      setFormValues(newFormValues);
+      setFormErrors(newFormErrors);
+      setIsFormValid(newIsFormValid);
+    },
+    [setFormValues, setFormErrors, setIsFormValid]
+  );
 
   return {
-    values,
-    errors,
-    onChange,
-    resetValidation,
+    formValues,
+    handleFormChange,
+    formErrors,
     isFormValid,
     setIsFormValid,
-    setValues
+    resetForm,
   };
 }
-
 export default useValidation;
