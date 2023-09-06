@@ -57,13 +57,13 @@ function Profile(props) {
                 <form className="profile__form" onSubmit={handleFormSubmit}>
                     <fieldset className="profile__data">
                         <label className="profile__input-label">Имя</label>
-                        <input disabled={isDisabled} value={formValues.name || ""} onChange={handleFormChange} name="name" type="text" className="profile__input input" placeholder="Введите имя" required />
+                        <input disabled={isDisabled} value={formValues.name || ""} onChange={handleFormChange} name="name" type="text" className="profile__input input" placeholder="Введите имя" minLength="2" maxLength="30" required />
                     </fieldset>
-                    <p className="profile__text-error">{formErrors.name}</p>
+                    <p className="profile__text-error">{formErrors.name || ""}</p>
 
                     <fieldset className="profile__data">
                         <label className="profile__input-label">E-mail</label>
-                        <input disabled={isDisabled} value={formValues.email || ""} onChange={handleFormChange} name="email" type="text" className="profile__input input" placeholder="Введите почту" required />
+                        <input disabled={isDisabled} value={formValues.email || ""} onChange={handleFormChange} name="email" type="email" className="profile__input input" placeholder="Введите почту" maxLength="30" required />
                     </fieldset>
                     <p className="profile__text-error">{formErrors.email}</p>
 

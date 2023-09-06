@@ -37,19 +37,19 @@ function Register(props) {
             <form onSubmit={handleSubmitRegister} param="reg" className="auth__form" name="form-auth">
                 <p className="auth__input-name">Имя</p>
                 <div className="auth__input-design">
-                    <input onChange={handleFormChange} value={formValues.name || ""} name="name" type="text" className="auth__input input" minLength="2" maxLength="30" placeholder="Введите имя" required />
+                    <input onChange={handleFormChange} value={formValues.name || ""} name="name" type="text" className={`auth__input input ${formErrors.name ? "auth__input-error" : ""}`} minLength="2" maxLength="30" placeholder="Введите имя" required />
                 </div>
                 <p className="auth__input-text-error">{formErrors.name || ""}</p>
 
                 <p className="auth__input-name">E-mail</p>
                 <div className="auth__input-design">
-                    <input onChange={handleFormChange} value={formValues.email || ""} name="email" type="email" className="auth__input input" minLength="5" maxLength="30" placeholder="Введите почту" required />
+                    <input onChange={handleFormChange} value={formValues.email || ""} name="email" type="email" className={`auth__input input ${formErrors.email ? "auth__input-error" : ""}`} maxLength="30" placeholder="Введите почту" required />
                 </div>
                 <p className="auth__input-text-error">{formErrors.email || ""}</p>
 
                 <p className="auth__input-name">Пароль</p>
                 <div className="auth__input-design">
-                    <input onChange={handleFormChange} value={formValues.password || ""} name="password" type="password" className="auth__input auth__text-password input auth__input-error" minLength="5" maxLength="30" placeholder="Введите пароль" required />
+                    <input onChange={handleFormChange} value={formValues.password || ""} name="password" type="password" className={`auth__input input ${formErrors.password ? "auth__input-error" : ""}`} minLength="5" maxLength="30" placeholder="Введите пароль" required />
                 </div>
                 <p className="auth__input-text-error">{formErrors.password || ""}</p>
 
