@@ -8,7 +8,7 @@ function Profile(props) {
 
     const { formValues, handleFormChange, formErrors, isFormValid, resetForm } = useValidation();
 
-    const { handleUpdateUser, handleSignOut, isLoggedIn, isLoader } = props;
+    const { handleUpdateUser, handleSignOut, isLoggedIn, isLoader, isUpdateProfile } = props;
 
     const currentUser = React.useContext(CurrentUserContext);
 
@@ -69,7 +69,7 @@ function Profile(props) {
 
                     <button onClick={toggleFormEditState} className="profile__button-edit button" type="button">{isDisabled ? "Редактировать" : "Отменить"}</button>
                     <button onClick={handleSignOut} className="profile__button-exit button" type="button">Выйти из аккаунта</button>
-                    {/* <p className="profile__text-error">{isResOk ? "Данные успешно обновлены!" : "Попробуйте еще раз."}</p> */}
+                    <p className="profile__text-error">{isUpdateProfile ? "Данные успешно обновлены!" : ""}</p>
                     <button disabled={!isFormValid || isLoader || isDisabled} className={submitButtonClass} type="submit">Сохранить</button>
                 </form>
 
