@@ -95,10 +95,7 @@ function App() {
 
   function handleSignOut() {
     setIsLoggedIn(false);
-    localStorage.removeItem("token");
-    localStorage.removeItem("filterParam");
-    localStorage.removeItem("moviesList");
-    localStorage.removeItem("filterFilmList");
+    localStorage.clear()
     setCurrentUser({});
     navigate("/");
   }
