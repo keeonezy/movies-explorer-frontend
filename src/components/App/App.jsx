@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css"
 import { Main } from "../Main/Main";
@@ -9,9 +9,9 @@ import { Profile } from "../Profile/Profile";
 import { Movies } from "../Movies/Movies";
 import { SavedMovies } from "../SavedMovies/SavedMovies";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import ProtectedRoute from "../../hooks/protectedRoute";
 import mainApi from "../../utils/MainApi";
 import moviesApi from "../../utils/MoviesApi";
-import ProtectedRoute from "../../hooks/protectedRoute";
 
 function App() {
   const [currentUser, setCurrentUser] = React.useState({});
@@ -19,6 +19,8 @@ function App() {
   const [errorMessage, setErrorMessage] = React.useState("");
   const [isLoader, setIsLoader] = React.useState(false);
   const [regedIn, setRegedIn] = React.useState(false);
+  const [allMovies, setAllMovies] = React.useState([]);
+  const [savedMovies, setSavedMovies] = React.useState([]);
 
   const navigate = useNavigate();
 
@@ -46,7 +48,7 @@ function App() {
     }
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     tokenCheck();
   }, []);
 
@@ -113,6 +115,66 @@ function App() {
       });
   }
 
+  function handleSaveMovieSavedList(movie) {
+    const jwt = localStorage.getItem("token");
+    mainApi.postSaveMovie(movie, jwt)
+      .then((userMovie) => {
+        setSavedMovies([...savedMovies, userMovie]);
+      })
+      .catch((err) => console.log(err))
+  }
+
+
+  function handleDeleteMovieSavedList(movie) {
+    const jwt = localStorage.getItem("token");
+    const movieToDelete = savedMovies.find(
+      (m) => movie.id === m.movieId || movie.movieId === m.movieId
+    );
+    mainApi.deleteSavedMovie(movieToDelete._id, jwt)
+      .then((removedMovie) => {
+        setSavedMovies((state) =>
+          state.filter((item) => item._id !== removedMovie._id)
+        );
+      })
+      .catch((err) => console.log(err))
+  }
+
+  function requestSavedMovies() {
+    const jwt = localStorage.getItem("token");
+    setIsLoader(true);
+    mainApi.getSavedMovies(jwt)
+      .then((data) => {
+        setSavedMovies(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setIsLoader(false);
+      });
+  }
+
+  function requestAllMovies() {
+    setIsLoader(true);
+    moviesApi.getMovies()
+      .then((data) => {
+        setAllMovies(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setIsLoader(false);
+      });
+  }
+
+  React.useEffect(() => {
+    if (isLoggedIn) {
+      requestAllMovies();
+      requestSavedMovies();
+    }
+  }, [isLoggedIn]);
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="body">
@@ -139,8 +201,6 @@ function App() {
             <Route path="/profile" element={< ProtectedRoute
               element={Profile}
               isLoggedIn={isLoggedIn}
-              errorMessage={errorMessage}
-              setErrorMessage={setErrorMessage}
               currentUser={currentUser}
               handleSignOut={handleSignOut}
               handleUpdateUser={handleUpdateUser}
@@ -149,15 +209,19 @@ function App() {
             <Route path="/movies" element={< ProtectedRoute
               element={Movies}
               isLoggedIn={isLoggedIn}
-              errorMessage={errorMessage}
-              setErrorMessage={setErrorMessage}
+              allMovies={allMovies}
+              handleSaveMovieSavedList={handleSaveMovieSavedList}
+              savedMovies={savedMovies}
+              handleDeleteMovieSavedList={handleDeleteMovieSavedList}
             />}></Route>
 
             <Route path="/saved-movies" element={< ProtectedRoute
               element={SavedMovies}
               isLoggedIn={isLoggedIn}
-              errorMessage={errorMessage}
-              setErrorMessage={setErrorMessage}
+              isLoader={isLoader}
+              handleSaveMovieSavedList={handleSaveMovieSavedList}
+              savedMovies={savedMovies}
+              handleDeleteMovieSavedList={handleDeleteMovieSavedList}
             />}></Route>
 
             <Route path="*" element={<NotFound

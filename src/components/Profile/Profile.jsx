@@ -8,7 +8,7 @@ function Profile(props) {
 
     const { formValues, handleFormChange, formErrors, isFormValid, resetForm } = useValidation();
 
-    const { handleUpdateUser, handleSignOut, isLoggedIn, isLoading } = props;
+    const { handleUpdateUser, handleSignOut, isLoggedIn, isLoader } = props;
 
     const currentUser = React.useContext(CurrentUserContext);
 
@@ -33,20 +33,20 @@ function Profile(props) {
     }, []);
 
     React.useEffect(() => {
-        if (!isLoading) {
+        if (!isLoader) {
             resetForm({
                 name: currentUser.name,
                 email: currentUser.email,
             });
         }
-    }, [currentUser.email, currentUser.name, isLoading, resetForm]);
+    }, [currentUser.email, currentUser.name, isLoader, resetForm]);
 
     const toggleFormEditState = () => {
         setIsDisabled(!isDisabled);
     };
 
     const submitButtonClass = `profile__button-save  ${isDisabled ? "profile__button-save-disabled" : ""
-        } ${!isFormValid || isLoading ? "profile__button-save-inactive" : ""}`;
+        } ${!isFormValid || isLoader ? "profile__button-save-inactive" : ""}`;
 
     return (
         <>
@@ -70,7 +70,7 @@ function Profile(props) {
                     <button onClick={toggleFormEditState} className="profile__button-edit button" type="button">{isDisabled ? "Редактировать" : "Отменить"}</button>
                     <button onClick={handleSignOut} className="profile__button-exit button" type="button">Выйти из аккаунта</button>
                     {/* <p className="profile__text-error">{isResOk ? "Данные успешно обновлены!" : "Попробуйте еще раз."}</p> */}
-                    <button disabled={!isFormValid || isLoading || isDisabled} className={submitButtonClass} type="submit">Сохранить</button>
+                    <button disabled={!isFormValid || isLoader || isDisabled} className={submitButtonClass} type="submit">Сохранить</button>
                 </form>
 
             </section>

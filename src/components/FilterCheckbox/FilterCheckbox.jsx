@@ -1,10 +1,19 @@
 import "./FilterCheckbox.css";
 
-function FilterCheckbox() {
+function FilterCheckbox(props) {
+
+    const { handleSearchMoviesButton, setIsChecked, isChecked } = props;
+
+    // Чекбокс обработчик
+    const toggleCheckbox = () => {
+        handleSearchMoviesButton(!isChecked);
+        setIsChecked(!isChecked);
+    };
+
     return (
         <div className="filter-checkbox">
             <label className="switch">
-                <input type="checkbox" className="switch__input" />
+                <input checked={!isChecked} onChange={toggleCheckbox} type="checkbox" className="switch__input" />
                 <span className="switch__slider"></span>
             </label>
 

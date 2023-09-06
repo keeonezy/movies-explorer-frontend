@@ -1,4 +1,4 @@
-import { API_URL } from "./constants";
+import { API_URL, MOVIES_URL } from "./constants";
 
 class MainApi {
   constructor({ url, headers }) {
@@ -57,7 +57,7 @@ class MainApi {
       .then(res => this._checkResponse(res))
   }
 
-  getSaveMovies(jwt) {
+  getSavedMovies(jwt) {
     return fetch(`${this.url}/movies`, {
       method: "GET",
       headers: { ...this.headers, "Authorization": `Bearer ${jwt}` }
@@ -86,7 +86,7 @@ class MainApi {
       .then(res => this._checkResponse(res))
   }
 
-  deleteSaveMovie(movieId, jwt) {
+  deleteSavedMovie(movieId, jwt) {
     return fetch(`${this.url}/movies/${movieId}`, {
       method: "DELETE",
       headers: { ...this.headers, "Authorization": `Bearer ${jwt}` }

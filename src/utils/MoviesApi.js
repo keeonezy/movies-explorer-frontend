@@ -1,9 +1,8 @@
 import { MOVIES_URL } from "./constants";
 
 class MoviesApi {
-  constructor({ url, headers }) {
+  constructor({ url }) {
     this._url = url;
-    this._headers = headers;
   }
   // Проверяем на ошибку
   _checkResponse(res) {
@@ -14,10 +13,10 @@ class MoviesApi {
   }
 
   getMovies() {
-    return this._request(`${this._url}/beatfilm-movies`, {
+    return fetch(`${this._url}/beatfilm-movies`, {
       method: "GET",
-      headers: this._headers,
     })
+      .then(res => this._checkResponse(res))
   }
 }
 
