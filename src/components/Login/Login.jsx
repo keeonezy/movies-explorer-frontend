@@ -7,7 +7,7 @@ function Login(props) {
 
     const { formValues, handleFormChange, formErrors, isFormValid, resetForm } = useValidation();
 
-    const { isLoggedIn, handleLogin } = props;
+    const { isLoggedIn, handleLogin, errorMessage } = props;
 
     const navigate = useNavigate();
 
@@ -46,6 +46,7 @@ function Login(props) {
                     <input onChange={handleFormChange} value={formValues.password || ""} name="password" type="password" className={`auth__input input ${formErrors.password ? "auth__input-error" : ""}`} minLength="5" maxLength="30" placeholder="Введите пароль" required />
                 </div>
                 <p className="auth__input-text-error">{formErrors.password || ""}</p>
+                <p className="auth__input-text-error">{errorMessage || ""}</p>
 
                 <button disabled={!isFormValid} className={`auth__form-button auth__form-button-login button ${!isFormValid && "auth__form-button-disabled"}`}>Войти</button>
 

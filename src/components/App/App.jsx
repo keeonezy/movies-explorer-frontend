@@ -73,7 +73,7 @@ function App() {
           });
       })
       .catch((err) => {
-        err.then((e) => setErrorMessage(e.message));
+        setErrorMessage(err);
         setIsLoggedIn(false);
       });
   }
@@ -88,7 +88,7 @@ function App() {
         handleLogin(values, 2000);
       })
       .catch((err) => {
-        err.then((e) => setErrorMessage(e.message));
+        setErrorMessage(err);
         setRegedIn(false);
       });
   }
@@ -187,14 +187,12 @@ function App() {
             <Route path="/signin" element={< Login
               isLoggedIn={isLoggedIn}
               errorMessage={errorMessage}
-              setErrorMessage={setErrorMessage}
               handleLogin={handleLogin}
             />}></Route>
 
             <Route path="/signup" element={< Register
               isLoggedIn={isLoggedIn}
               errorMessage={errorMessage}
-              setErrorMessage={setErrorMessage}
               handleRegister={handleRegister}
             />}></Route>
 
