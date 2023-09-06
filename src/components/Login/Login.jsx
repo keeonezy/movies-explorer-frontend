@@ -7,7 +7,7 @@ function Login(props) {
 
     const { formValues, handleFormChange, formErrors, isFormValid, resetForm } = useValidation();
 
-    const { isLoggedIn, handleLogin, errorMessage, setErrorMessage } = props;
+    const { isLoggedIn, handleLogin } = props;
 
     const navigate = useNavigate();
 

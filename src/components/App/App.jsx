@@ -209,6 +209,7 @@ function App() {
             <Route path="/movies" element={< ProtectedRoute
               element={Movies}
               isLoggedIn={isLoggedIn}
+              isLoader={isLoader}
               allMovies={allMovies}
               handleSaveMovieSavedList={handleSaveMovieSavedList}
               savedMovies={savedMovies}

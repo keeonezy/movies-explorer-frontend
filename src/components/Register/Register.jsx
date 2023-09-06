@@ -8,7 +8,7 @@ function Register(props) {
 
     const { formValues, handleFormChange, formErrors, isFormValid, resetForm } = useValidation();
 
-    const { isLoggedIn, handleRegister, errorMessage, setErrorMessage } = props;
+    const { isLoggedIn, handleRegister } = props;
 
     const navigate = useNavigate();
 

@@ -5,7 +5,6 @@ import { Footer } from "../Footer/Footer";
 import { useState } from "react";
 import { useEffect } from "react";
 import { SHORT_MOVIE_DURATION } from "../../utils/constants";
-import Preloader from "../Preloader/Preloader";
 
 function Movies(props) {
 
@@ -59,7 +58,6 @@ function Movies(props) {
                     isChecked={isChecked}
                     setIsChecked={setIsChecked}
                 />
-                <Preloader isLoader={isLoader} />
 
                 {!inputError && (
                     <MoviesCardList

@@ -3,11 +3,12 @@ import { MoviesCard } from "../MoviesCard/MoviesCard";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
+import Preloader from "../Preloader/Preloader";
 import { SCREEN_WIDTH_LAPTOP, SCREEN_WIDTH_TABLET, LARGE_MOVIES_VALUES, MEDIUM_MOVIES_VALUES, SMALL_MOVIES_VALUES, BUTTON_LARGE_MOVIES_VALUES, BUTTON_SMALL_MOVIES_VALUES, } from "../../utils/constants";
 
 function MoviesCardList(props) {
 
-    const { movies, savedMovies, handleSaveMovieSavedList, handleDeleteMovieSavedList, filtredMovies } = props
+    const { isLoader, movies, savedMovies, handleSaveMovieSavedList, handleDeleteMovieSavedList, filtredMovies } = props
 
     const [showPagination, setShowPagination] = useState(false);
 
@@ -63,6 +64,8 @@ function MoviesCardList(props) {
     return (
         <>
             <section className="movies-card-list">
+
+                {isLoader && <Preloader />}
 
                 {currentMoviesList.length === 0 ? (
                     <p className="movies-card-list__text-error">Фильм не был найден</p>
