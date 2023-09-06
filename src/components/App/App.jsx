@@ -69,7 +69,7 @@ function App() {
             }
           })
           .catch(() => {
-            setErrorMessage("На сервере произошла ошибка");
+            setErrorMessage("На сервере произошла ошибка!");
           });
       })
       .catch((err) => {
