@@ -73,7 +73,7 @@ function MoviesCardList(props) {
                     )}
 
                 {pathname === "/movies" &&
-                    currentMoviesList.length === 0 && (
+                    currentMoviesList.length === 0 && localStorage.getItem('searchQuery') !== null && (
                         <div className="movies-card-list__text-error">Фильм не был найден</div>
                     )}
 
