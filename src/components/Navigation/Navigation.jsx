@@ -18,7 +18,6 @@ function Navigation({ isLoggedIn }) {
         setMenuOpen(false);
     }
 
-
     return (
         <>
             {!isLoggedIn ? (

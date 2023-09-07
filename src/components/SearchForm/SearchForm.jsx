@@ -4,7 +4,7 @@ import seachIcon from "../../images/seachform-find.svg"
 
 function SearchForm(props) {
 
-    const { searchQuery, setSearchQuery, isChecked, setIsChecked, handleSearchMoviesButton } = props;
+    const { searchQuery, setSearchQuery, isChecked, setIsChecked, handleSearchMoviesButton, currentMoviesList } = props;
 
     const updateSearchInput = (e) => {
         setSearchQuery(e.target.value);

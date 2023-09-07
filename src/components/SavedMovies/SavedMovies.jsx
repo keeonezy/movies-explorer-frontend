@@ -7,7 +7,7 @@ import { SHORT_MOVIE_DURATION } from "../../utils/constants";
 
 function SavedMovies(props) {
 
-    const { isLoggedIn, handleSaveMovieSavedList, savedMovies: savedMoviesList, handleDeleteMovieSavedList, } = props
+    const { isLoggedIn, handleSaveMovieSavedList, savedMovies: savedMoviesList, handleDeleteMovieSavedList, currentMoviesList } = props
 
     const [isChecked, setIsChecked] = useState(true);
     const [searchQuery, setSearchQuery] = useState("");
@@ -38,13 +38,14 @@ function SavedMovies(props) {
                     handleSearchMoviesButton={updateFilterString}
                     isChecked={isChecked}
                     setIsChecked={setIsChecked}
+                    currentMoviesList={currentMoviesList}
                 />
                 <MoviesCardList
                     filtredMovies={filtredMovies}
                     handleSaveMovieSavedList={handleSaveMovieSavedList}
                     savedMovies={savedMoviesList}
                     handleDeleteMovieSavedList={handleDeleteMovieSavedList}
-                    handleSearchMoviesButton={updateFilterString}
+                    updateSearchInput={updateFilterString}
                 />
             </main>
             <Footer />

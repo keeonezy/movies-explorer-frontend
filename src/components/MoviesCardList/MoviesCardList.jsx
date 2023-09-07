@@ -8,7 +8,7 @@ import { SCREEN_WIDTH_LAPTOP, SCREEN_WIDTH_TABLET, LARGE_MOVIES_VALUES, MEDIUM_M
 
 function MoviesCardList(props) {
 
-    const { isLoader, movies, savedMovies, handleSaveMovieSavedList, handleDeleteMovieSavedList, filtredMovies } = props
+    const { isLoader, movies, savedMovies, handleSaveMovieSavedList, handleDeleteMovieSavedList, filtredMovies, updateSearchInput } = props
 
     const [showPagination, setShowPagination] = useState(false);
 
@@ -67,22 +67,28 @@ function MoviesCardList(props) {
 
                 {isLoader && <Preloader />}
 
-                {currentMoviesList.length === 0 ? (
-                    <p className="movies-card-list__text-error">Фильм не был найден</p>
-                ) : (
-                    <ul className="movies-card-list__cards ul">
-                        {currentMoviesList.slice(0, moviesPage).map((movie) => (
-                            <MoviesCard
-                                key={movie.id || movie.movieId}
-                                movie={movie}
-                                savedMovies={savedMovies}
-                                filtredMovies={filtredMovies}
-                                handleSaveMovieSavedList={handleSaveMovieSavedList}
-                                handleDeleteMovieSavedList={handleDeleteMovieSavedList}
-                            />
-                        ))}
-                    </ul>
-                )}
+                {pathname === "/saved-movies" &&
+                    currentMoviesList.length === 0 && (
+                        <div className="movies-card-list__text-error">Фильмов нету в сохраненных</div>
+                    )}
+
+                {pathname === "/movies" &&
+                    currentMoviesList.length === 0 && (
+                        <div className="movies-card-list__text-error">Фильм не был найден</div>
+                    )}
+
+                <ul className="movies-card-list__cards ul">
+                    {currentMoviesList.slice(0, moviesPage).map((movie) => (
+                        <MoviesCard
+                            key={movie.id || movie.movieId}
+                            movie={movie}
+                            savedMovies={savedMovies}
+                            filtredMovies={filtredMovies}
+                            handleSaveMovieSavedList={handleSaveMovieSavedList}
+                            handleDeleteMovieSavedList={handleDeleteMovieSavedList}
+                        />
+                    ))}
+                </ul>
 
                 {showPagination && (
                     <button onClick={increaseMoviesPage} className="movies-card-list__button button" type="button">Ещё</button>
