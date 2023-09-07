@@ -196,6 +196,7 @@ function App() {
             <Route path="/profile" element={< ProtectedRoute
               element={Profile}
               isLoggedIn={isLoggedIn}
+              setErrorMessage={setErrorMessage}
               errorMessage={errorMessage}
               currentUser={currentUser}
               handleSignOut={handleSignOut}

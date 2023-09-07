@@ -8,7 +8,7 @@ function Profile(props) {
 
     const { formValues, handleFormChange, formErrors, isFormValid, resetForm } = useValidation();
 
-    const { handleUpdateUser, handleSignOut, isLoggedIn, isLoader, errorMessage } = props;
+    const { handleUpdateUser, handleSignOut, isLoggedIn, isLoader, errorMessage, setErrorMessage } = props;
 
     const currentUser = React.useContext(CurrentUserContext);
 
@@ -30,7 +30,8 @@ function Profile(props) {
     };
 
     React.useEffect(() => {
-    }, []);
+        setErrorMessage("");
+    }, [])
 
     React.useEffect(() => {
         if (!isLoader) {
