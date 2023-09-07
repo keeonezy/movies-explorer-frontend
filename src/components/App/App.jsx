@@ -17,7 +17,6 @@ function App() {
   const [currentUser, setCurrentUser] = React.useState({});
   const [isLoggedIn, setIsLoggedIn] = React.useState(true);
   const [errorMessage, setErrorMessage] = React.useState("");
-  const [isUpdateProfile, setIsUpdateProfile] = React.useState("");
   const [isLoader, setIsLoader] = React.useState(false);
   const [regedIn, setRegedIn] = React.useState(false);
   const [allMovies, setAllMovies] = React.useState([]);
@@ -107,10 +106,9 @@ function App() {
       .then((res) => {
         setErrorMessage("Данные успешно изменены");
         setCurrentUser(res);
-        setIsUpdateProfile(true)
       })
       .catch((err) => {
-        setErrorMessage(err.message);
+        setErrorMessage(err);
       });
   }
 
@@ -198,7 +196,7 @@ function App() {
             <Route path="/profile" element={< ProtectedRoute
               element={Profile}
               isLoggedIn={isLoggedIn}
-              isUpdateProfile={isUpdateProfile}
+              errorMessage={errorMessage}
               currentUser={currentUser}
               handleSignOut={handleSignOut}
               handleUpdateUser={handleUpdateUser}

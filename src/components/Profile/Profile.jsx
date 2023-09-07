@@ -8,7 +8,7 @@ function Profile(props) {
 
     const { formValues, handleFormChange, formErrors, isFormValid, resetForm } = useValidation();
 
-    const { handleUpdateUser, handleSignOut, isLoggedIn, isLoader, isUpdateProfile } = props;
+    const { handleUpdateUser, handleSignOut, isLoggedIn, isLoader, errorMessage } = props;
 
     const currentUser = React.useContext(CurrentUserContext);
 
@@ -66,10 +66,10 @@ function Profile(props) {
                         <input disabled={isDisabled} value={formValues.email || ""} onChange={handleFormChange} pattern="^\S+@\S+\.\S+$" name="email" type="email" className="profile__input input" placeholder="Введите почту" maxLength="30" required />
                     </fieldset>
                     <p className="profile__text-error">{formErrors.email}</p>
+                    <p className="profile__text-error">{errorMessage}</p>
 
                     <button onClick={toggleFormEditState} className="profile__button-edit button" type="button">{isDisabled ? "Редактировать" : "Отменить"}</button>
                     <button onClick={handleSignOut} className="profile__button-exit button" type="button">Выйти из аккаунта</button>
-                    <p className="profile__text-error">{isUpdateProfile ? "Данные успешно обновлены!" : ""}</p>
                     <button disabled={!isFormValid || isLoader || isDisabled} className={submitButtonClass} type="submit">Сохранить</button>
                 </form>
 
