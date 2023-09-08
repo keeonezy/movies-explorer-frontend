@@ -1,0 +1,139 @@
+.auth {
+    margin: 70px auto 0;
+    max-width: 396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth__title {
+    margin: 0;
+    margin-top: 40px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.auth__input-name {
+    margin: 0;
+    margin-top: 20px;
+    color: #A0A0A0;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.auth__input-name:first-child {
+    margin-top: 40px;
+}
+
+.auth__input-design {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.auth__input {
+    padding: 0px 15px;
+    height: 46px;
+    border-radius: 8px;
+    background: #F9F9F9;
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.auth__input-text-error {
+    margin: 0;
+    margin-top: 10px;
+    color: #EE3465;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.auth__input-error {
+    color: #EE3465;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.auth__form-button {
+    margin-top: 69px;
+    width: 396px;
+    height: 45px;
+    border-radius: 3px;
+    background: #FF6838;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth__form-button-disabled {
+    background: #F8F8F8;
+    color: #C2C2C2;
+    cursor: not-allowed;
+}
+
+.auth__form-button-login {
+    margin-top: 179px;
+}
+
+.auth__info {
+    margin: 0;
+    margin-top: 16px;
+    color: #A0A0A0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.auth__info a {
+    color: #FF6838;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1140px) {
+    .auth {
+        margin: 232px auto 0;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    .auth {
+        margin: 56px auto 0;
+        max-width: 260px;
+        align-items: center;
+    }
+
+    .auth__title {
+        margin-top: 50px;
+    }
+
+    .auth__input-name:first-child {
+        margin-top: 80px;
+    }
+
+    .auth__form-button {
+        margin-top: 157px;
+        width: 260px;
+        font-size: 12px;
+    }
+
+    .auth__form-button-login {
+        margin-top: 267px;
+    }
+
+    .auth__info {
+        font-size: 12px;
+    }
+
+    .auth__info span {
+        font-size: 12px;
+    }
+}

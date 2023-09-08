@@ -1,0 +1,156 @@
+.header {
+    min-height: 74px;
+}
+
+.header__container-left {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+}
+
+.header__navigation {
+    display: flex;
+    gap: 16px;
+}
+
+.header__link {
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.header__link:active {
+    font-weight: 500;
+}
+
+.header__navigation {
+    display: flex;
+}
+
+.header__container {
+    margin: 0 auto;
+    max-width: 1140px;
+    min-height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container-right {
+    display: flex;
+    gap: 30px;
+}
+
+.header__signup {
+    color: #FFF;
+    color: black;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__signin {
+    width: 76px;
+    height: 32px;
+    border-radius: 3px;
+    background: #2BE080;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__profile {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+}
+
+.header__profile-text {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.header__profile-image {
+    background: #F9F9F9;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.header__menu {
+    display: none;
+}
+
+.header_offer {
+    background: #465DFF;
+}
+
+.header__link.promo {
+    color: white;
+}
+
+.header__profile-text.promo {
+    color: white;
+}
+
+.header__signup.promo {
+    color: white;
+}
+
+@media screen and (max-width: 1140px) {
+    .header__container {
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .header__menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header__navigation {
+        display: none;
+    }
+
+    .header__profile {
+        display: none;
+    }
+
+    .header__profile_active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .header__container {
+        margin: 0 14px;
+    }
+
+    .header__container-right {
+        gap: 14px;
+    }
+
+    .header__signup {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .header__signin {
+        width: 54px;
+        height: 26px;
+        font-size: 10px;
+        line-height: 16px;
+    }
+}

@@ -1,0 +1,193 @@
+.about-project {
+    margin: 110px auto 110px;
+    max-width: 1140px;
+}
+
+.about-project__info {
+    padding-bottom: 28px;
+    border-bottom: 1px solid black;
+}
+
+.about-project__title {
+    margin: 0;
+    color: #000;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.88px;
+}
+
+.about-project__container-time {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-project__title-time {
+    margin: 0;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+}
+
+.about-project__description-time {
+    margin: 0;
+    margin-top: 26px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.about-project__container-progess {
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-project__progess-left {
+    background: #2BE080;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-project__progess-right {
+    background: #F2F2F2;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-project__progress-text {
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.about-project__progress-name {
+    margin: 0;
+    color: #A0A0A0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+}
+
+.about-project__progress-l {
+    width: 100%;
+    max-width: 228px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-project__progress-xl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+@media screen and (max-width: 1140px) {
+
+    .about-project {
+        margin: 90px auto 90px;
+    }
+
+    .about-project__info {
+        margin: 0 50px 0;
+    }
+
+    .about-project__container-time {
+        margin: 70px 50px 0;
+    }
+
+    .about-project__container-time {
+        gap: 30px;
+    }
+
+    .about-project__container-progess {
+        margin: 93px 50px 0;
+    }
+
+    .about-project__progress-l {
+        max-width: 140px;
+    }
+
+    .about-project__description-time {
+        margin-top: 22px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    .about-project {
+        margin: 70px auto 69px;
+    }
+
+    .about-project__info {
+        margin: 0 18px 0;
+    }
+
+    .about-project__title {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+
+    .about-project__container-time {
+        flex-direction: column;
+        margin: 60px 18px 0;
+        gap: 56px;
+    }
+
+    .about-project__title-time {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+
+    .about-project__description-time {
+        margin-top: 16px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .about-project__container-progess {
+        margin: 60px 18px 0;
+    }
+
+    .about-project__progess-left {
+        height: 35px;
+    }
+
+    .about-project__progess-right {
+        height: 35px;
+    }
+
+    .about-project__progress-text {
+        font-size: 11px;
+    }
+
+    .about-project__progess-right {
+        font-size: 11px;
+    }
+
+    .about-project__progress-l {
+        max-width: 100px;
+        gap: 10px;
+    }
+
+    .about-project__progress-xl {
+        gap: 10px;
+    }
+
+    .about-project__progress-name {
+        font-size: 11px;
+    }
+}
